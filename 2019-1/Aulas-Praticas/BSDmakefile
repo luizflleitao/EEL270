@@ -7,8 +7,20 @@
 # Autor: Luiz Fernando Loureiro Leitao
 #
 # $Author: luiz.leitao $
-# $Date: 2019/03/29 06:31:55 $
+# $Date: 2019/04/05 02:45:01 $
 # $Log: BSDmakefile,v $
+# Revision 1.11  2019/04/05 02:45:01  luiz.leitao
+# Implementacao da Serie de Fibonacci utilizando o laco de repeticao while.
+#
+# Revision 1.10  2019/04/05 02:33:00  luiz.leitao
+# Implementacao da Serie de Fibonacci utilizando o laco de repeticao for.
+#
+# Revision 1.9  2019/04/05 02:18:39  luiz.leitao
+# Implementacao da Serie de Fibonacci utilizando o laco de repeticao do ... while.
+#
+# Revision 1.8  2019/04/05 01:59:04  luiz.leitao
+# Implementacao da Serie de Fibonacci utilizando recursividade.
+#
 # Revision 1.7  2019/03/29 06:31:55  luiz.leitao
 # Inclusao dos tipos basicos combinados com os modificadores de sinal e com os modificadores de largura da linguagem C.
 #
@@ -89,6 +101,17 @@ AULA0107OBJS = aula0107.o
 
 
 
+# Macros referentes aos codigos-objeto da aula pratica 02.
+
+AULA0202AOBJS = aula0201a.o aula0202.o
+AULA0202BOBJS = aula0201b.o aula0202.o
+AULA0202COBJS = aula0201c.o aula0202.o
+AULA0202DOBJS = aula0201d.o aula0202.o
+
+
+
+
+
 # Macro referente aos executaveis da aula pratica 01.
 
 AULA01 = aula0101\
@@ -103,9 +126,20 @@ AULA01 = aula0101\
 
 
 
+# Macro referente aos executaveis da aula pratica 02.
+
+AULA02 = aula0202a\
+	 aula0202b\
+	 aula0202c\
+	 aula0202d
+
+
+
+
+
 # Macro referente aos executaveis das aulas praticas de 01 a 10.
 
-EXECS = $(AULA01) 
+EXECS = $(AULA01) $(AULA02)
 
 
 
@@ -171,6 +205,30 @@ aula0106: $(AULA0106OBJS)
 
 aula0107: $(AULA0107OBJS)
 	$(LD) $(LFLAGS) -o $@ $(AULA0107OBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 02.
+
+aula02: $(AULA02)
+
+aula0202a: $(AULA0202AOBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0202AOBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+aula0202b: $(AULA0202BOBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0202BOBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+aula0202c: $(AULA0202COBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0202COBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+aula0202d: $(AULA0202DOBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0202DOBJS)
 	cp $@ $@-$(OS)-$(CC)
 
 
