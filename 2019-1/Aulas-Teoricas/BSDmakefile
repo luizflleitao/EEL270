@@ -12,22 +12,25 @@
 # $Date$
 # $Log$
 
-OS = $(shell uname -s)
+OS = `uname -s`
 
+.ifdef GCC
 CC = gcc
 LD = gcc
-
-ifeq ($(cc), GCC)
-CC = gcc
-LD = gcc
-endif
-
-ifeq ($(cc), CLANG)
+.elif CLANG
 CC = clang
 LD = clang
-endif
+.else
+CC = gcc
+LD = gcc
+.endif
  
-CFLAGS = -Wall -std=c99
+.ifndef _MY_DEBUG_
+CFLAGS = -Wall -std=c99 
+.else
+CFLAGS = -Wall -std=c99 -D_MY_DEBUG_
+.endif
+
 LFLAGS = -Wall -std=c99
 
 EXE001OBJS = exemplo_001.o
@@ -39,6 +42,18 @@ EXE006OBJS = exemplo_006.o
 EXE007OBJS = exemplo_007.o
 EXE008OBJS = exemplo_008.o
 EXE009OBJS = exemplo_009.o
+EXE010OBJS = exemplo_010.o
+EXE011OBJS = exemplo_011.o
+EXE012OBJS = exemplo_012.o
+EXE013OBJS = exemplo_013.o
+EXE014OBJS = exemplo_014.o
+EXE016AOBJS = exemplo_015a.o exemplo_016.o
+EXE016BOBJS = exemplo_015b.o exemplo_016.o
+EXE016COBJS = exemplo_015c.o exemplo_016.o
+EXE016DOBJS = exemplo_015d.o exemplo_016.o
+EXE017OBJS = exemplo_017.o
+EXE018OBJS = exemplo_018.o
+EXE019OBJS = exemplo_019.o
 
 EXECS = exemplo_001\
 	exemplo_002\
@@ -48,7 +63,19 @@ EXECS = exemplo_001\
 	exemplo_006\
 	exemplo_007\
 	exemplo_008\
-	exemplo_009
+	exemplo_009\
+	exemplo_010\
+	exemplo_011\
+	exemplo_012\
+	exemplo_013\
+	exemplo_014\
+	exemplo_016a\
+	exemplo_016b\
+	exemplo_016c\
+	exemplo_016d\
+	exemplo_017\
+	exemplo_018\
+	exemplo_019
 
 # Regra Implicita
 .c.o:
@@ -112,17 +139,45 @@ exemplo_014: $(EXE014OBJS)
 	$(LD) $(LFLAGS) -o $@ $(EXE014OBJS)
 	cp $@ $@-$(OS)-$(CC)
 
+exemplo_016a: $(EXE016AOBJS)
+	$(LD) $(LFLAGS) -o $@ $(EXE016AOBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+exemplo_016b: $(EXE016BOBJS)
+	$(LD) $(LFLAGS) -o $@ $(EXE016BOBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+exemplo_016c: $(EXE016COBJS)
+	$(LD) $(LFLAGS) -o $@ $(EXE016COBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+exemplo_016d: $(EXE016DOBJS)
+	$(LD) $(LFLAGS) -o $@ $(EXE016DOBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+exemplo_017: $(EXE017OBJS)
+	$(LD) $(LFLAGS) -o $@ $(EXE017OBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+exemplo_018: $(EXE018OBJS)
+	$(LD) $(LFLAGS) -o $@ $(EXE018OBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+exemplo_019: $(EXE019OBJS)
+	$(LD) $(LFLAGS) -o $@ $(EXE019OBJS)
+	cp $@ $@-$(OS)-$(CC)
+
 clean:
-	rm -f *.o $(EXECS)
+	rm -f *.o $(EXECS) 
 
 clean-all:
 	rm -f *.o $(EXECS) *-FreeBSD-* *-Linux-*
 
 clean-freebsd:
-	rm -f *.o *-FreeBSD-*
+	rm -f *.o $(EXECS) *-FreeBSD-*
 
 clean-linux:
-	rm -f *.o *-Linux-*
+	rm -f *.o $(EXECS) *-Linux-*
 
 
 

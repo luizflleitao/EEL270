@@ -27,31 +27,11 @@
 #define OK				0
 #define NUMERO_ARGUMENTOS_INVALIDO	1
 
-unsigned long long
-CalcularFatorial (unsigned);
-
-unsigned long long
-CalcularFatorial (unsigned numero)
-{
-  unsigned long long resultado = 1;
-
-  if (numero <= 1)
-    return resultado;
-
-  do
-  {
-    resultado *= numero;
-    numero--; 
-  }
-  while (numero > 0); 
-
-  return resultado;
-}
-
 int
 main (int argc, char *argv []) 
 {
   unsigned numero;
+  float resultado;
 
   if (argc != NUMERO_ARGUMENTOS)
   {
@@ -61,7 +41,14 @@ main (int argc, char *argv [])
   
   numero = atoi (argv [1]);
 
-  printf ("\n%s!: %llu\n\n", argv [1], CalcularFatorial (numero));
+  resultado = 0;
+  while (numero > 0)
+  {
+    resultado += 1.0/numero;
+    numero--;
+  }
+
+  printf ("\nS(%s): %f\n\n", argv [1], resultado);
   return OK;
 
 } /* funcao principal */

@@ -12,7 +12,6 @@
  * $Date$
  * $Log$
  */
-
 #ifdef _MY_DEBUG_
 #include <stdio.h>
 #endif
@@ -22,22 +21,14 @@
 unsigned long long
 CalcularFatorial (unsigned numero)
 {
-  unsigned long long resultado = 1;
 
   #ifdef _MY_DEBUG_
-  printf ("Implementacao utilizando do ... while \n");
+  printf ("Implementacao utilizando recursividade \n");
   #endif
 
   if (numero <= 1)
-    return resultado;
+    return 1;
 
-  do
-  {
-    resultado *= numero;
-    numero--; 
-  }
-  while (numero > 0); 
-
-  return resultado;
+  return numero * CalcularFatorial (numero - 1);
 }
 

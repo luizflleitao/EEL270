@@ -26,32 +26,15 @@
 
 #define OK				0
 #define NUMERO_ARGUMENTOS_INVALIDO	1
+#define ARGUMENTO_INVALIDO		2	
 
-unsigned long long
-CalcularFatorial (unsigned);
-
-unsigned long long
-CalcularFatorial (unsigned numero)
-{
-  unsigned long long resultado = 1;
-
-  if (numero <= 1)
-    return resultado;
-
-  do
-  {
-    resultado *= numero;
-    numero--; 
-  }
-  while (numero > 0); 
-
-  return resultado;
-}
+#define EOS				'\0'
 
 int
 main (int argc, char *argv []) 
 {
-  unsigned numero;
+  unsigned numero, indice;
+  float resultado;
 
   if (argc != NUMERO_ARGUMENTOS)
   {
@@ -59,9 +42,23 @@ main (int argc, char *argv [])
     exit (NUMERO_ARGUMENTOS_INVALIDO);
   }	  
   
+  for (indice = 0; argv [1][indice] != EOS; indice++)
+    if (argv [1][indice] < '0' || argv [1][indice] > '9')
+    {
+      printf ("Argumento contem caractere invalido: \"%c\"\n", argv [1][indice]);
+      exit (ARGUMENTO_INVALIDO);
+    }
+
   numero = atoi (argv [1]);
 
-  printf ("\n%s!: %llu\n\n", argv [1], CalcularFatorial (numero));
+  resultado = 0;
+  while (numero > 0)
+  {
+    resultado += 1.0/numero;
+    numero--;
+  }
+
+  printf ("\nS(%s): %f\n\n", argv [1], resultado);
   return OK;
 
 } /* funcao principal */

@@ -16,9 +16,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "exemplo_015.h"
-
-#define NUMERO_ARGUMENTOS		2
+#define NUMERO_ARGUMENTOS		1
 
 #define OK				0
 #define NUMERO_ARGUMENTOS_INVALIDO	1
@@ -26,17 +24,17 @@
 int
 main (int argc, char *argv []) 
 {
-  unsigned numero;
+  unsigned char indice;
 
   if (argc != NUMERO_ARGUMENTOS)
   {
-    printf ("Uso: %s <inteiro-nao-negativo>\n", argv [0]);
+    printf ("Uso: %s\n", argv [0]);
     exit (NUMERO_ARGUMENTOS_INVALIDO);
   }	  
   
-  numero = atoi (argv [1]);
+  for (indice = 0; indice < 256; indice++)
+    printf ("%03u\t%03o\t%02X\t%c\n", indice, indice, indice, indice);
 
-  printf ("\n%s!: %llu\n\n", argv [1], CalcularFatorial (numero));
   return OK;
 
 } /* funcao principal */
