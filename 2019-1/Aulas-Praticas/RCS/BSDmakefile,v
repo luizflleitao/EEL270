@@ -1,10 +1,30 @@
-head	1.7;
+head	1.11;
 access;
 symbols;
 locks
-	luiz.leitao:1.7; strict;
+	luiz.leitao:1.11; strict;
 comment	@# @;
 
+
+1.11
+date	2019.04.05.02.45.01;	author luiz.leitao;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2019.04.05.02.33.00;	author luiz.leitao;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2019.04.05.02.18.39;	author luiz.leitao;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2019.04.05.01.59.04;	author luiz.leitao;	state Exp;
+branches;
+next	1.7;
 
 1.7
 date	2019.03.29.06.31.55;	author luiz.leitao;	state Exp;
@@ -47,9 +67,9 @@ desc
 @
 
 
-1.7
+1.11
 log
-@Inclusao dos tipos basicos combinados com os modificadores de sinal e com os modificadores de largura da linguagem C.
+@Implementacao da Serie de Fibonacci utilizando o laco de repeticao while.
 @
 text
 @#
@@ -61,8 +81,20 @@ text
 # Autor: Luiz Fernando Loureiro Leitao
 #
 # $Author: luiz.leitao $
-# $Date: 2019/03/29 06:20:24 $
+# $Date: 2019/04/05 02:33:00 $
 # $Log: BSDmakefile,v $
+# Revision 1.10  2019/04/05 02:33:00  luiz.leitao
+# Implementacao da Serie de Fibonacci utilizando o laco de repeticao for.
+#
+# Revision 1.9  2019/04/05 02:18:39  luiz.leitao
+# Implementacao da Serie de Fibonacci utilizando o laco de repeticao do ... while.
+#
+# Revision 1.8  2019/04/05 01:59:04  luiz.leitao
+# Implementacao da Serie de Fibonacci utilizando recursividade.
+#
+# Revision 1.7  2019/03/29 06:31:55  luiz.leitao
+# Inclusao dos tipos basicos combinados com os modificadores de sinal e com os modificadores de largura da linguagem C.
+#
 # Revision 1.6  2019/03/29 06:20:24  luiz.leitao
 # Inclusao dos tipos basicos combinados com os modificadores de largura da linguagem C.
 #
@@ -140,6 +172,17 @@ AULA0107OBJS = aula0107.o
 
 
 
+# Macros referentes aos codigos-objeto da aula pratica 02.
+
+AULA0202AOBJS = aula0201a.o aula0202.o
+AULA0202BOBJS = aula0201b.o aula0202.o
+AULA0202COBJS = aula0201c.o aula0202.o
+AULA0202DOBJS = aula0201d.o aula0202.o
+
+
+
+
+
 # Macro referente aos executaveis da aula pratica 01.
 
 AULA01 = aula0101\
@@ -154,9 +197,20 @@ AULA01 = aula0101\
 
 
 
+# Macro referente aos executaveis da aula pratica 02.
+
+AULA02 = aula0202a\
+	 aula0202b\
+	 aula0202c\
+	 aula0202d
+
+
+
+
+
 # Macro referente aos executaveis das aulas praticas de 01 a 10.
 
-EXECS = $(AULA01) 
+EXECS = $(AULA01) $(AULA02)
 
 
 
@@ -228,6 +282,30 @@ aula0107: $(AULA0107OBJS)
 
 
 
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 02.
+
+aula02: $(AULA02)
+
+aula0202a: $(AULA0202AOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0202AOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0202b: $(AULA0202BOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0202BOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0202c: $(AULA0202COBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0202COBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0202d: $(AULA0202DOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0202DOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+
+
+
+
 # Rotulo referente a exclusao de todos os codigos-objeto e executaveis gerados, exceto os executaveis
 # que indicam a combinacao entre sistema operacional e compilador/link-editor.
 
@@ -271,6 +349,75 @@ clean-linux:
 
 
 # $RCSfile: BSDmakefile,v $
+@
+
+
+1.10
+log
+@Implementacao da Serie de Fibonacci utilizando o laco de repeticao for.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/04/05 02:18:39 $
+d12 3
+d106 1
+d130 2
+a131 1
+	 aula0202c
+d225 4
+@
+
+
+1.9
+log
+@Implementacao da Serie de Fibonacci utilizando o laco de repeticao do ... while.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/04/05 01:59:04 $
+d12 3
+d102 1
+d125 2
+a126 1
+	 aula0202b
+d216 4
+@
+
+
+1.8
+log
+@Implementacao da Serie de Fibonacci utilizando recursividade.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/03/29 06:31:55 $
+d12 3
+d98 1
+d120 2
+a121 1
+AULA02 = aula0202a
+d207 4
+@
+
+
+1.7
+log
+@Inclusao dos tipos basicos combinados com os modificadores de sinal e com os modificadores de largura da linguagem C.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/03/29 06:20:24 $
+d12 3
+d92 8
+d114 8
+d124 1
+a124 1
+EXECS = $(AULA01) 
+d190 12
 @
 
 
