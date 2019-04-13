@@ -7,8 +7,20 @@
 # Autor: Luiz Fernando Loureiro Leitao
 #
 # $Author: luiz.leitao $
-# $Date: 2019/04/05 02:44:32 $
+# $Date: 2019/04/10 16:51:54 $
 # $Log: GNUmakefile,v $
+# Revision 1.15  2019/04/10 16:51:54  luiz.leitao
+# Implementacao da funcao CalcularMaximoDivisorComum utilizando o laco de repeticao while.
+#
+# Revision 1.14  2019/04/10 16:32:41  luiz.leitao
+# Implementacao da funcao CalcularMaximoDivisorComum utilizando o laco de repeticao for.
+#
+# Revision 1.13  2019/04/10 16:15:27  luiz.leitao
+# Implementacao da funcao CalcularMaximoDivisorComum utilizando o laco de repeticao do ... while.
+#
+# Revision 1.12  2019/04/10 16:03:52  luiz.leitao
+# Implementacao da funcao CalcularMaximoDivisorComum utilizando recursividade.
+#
 # Revision 1.11  2019/04/05 02:44:32  luiz.leitao
 # Implementacao da Serie de Fibonacci utilizando o laco de repeticao while.
 #
@@ -126,6 +138,17 @@ AULA0202DOBJS = aula0201d.o aula0202.o
 
 
 
+# Macros referentes aos codigos-objeto da aula pratica 03.
+
+AULA0302AOBJS = aula0301a.o aula0302.o
+AULA0302BOBJS = aula0301b.o aula0302.o
+AULA0302COBJS = aula0301c.o aula0302.o
+AULA0302DOBJS = aula0301d.o aula0302.o
+
+
+
+
+
 # Macro referente aos executaveis da aula pratica 01.
 
 AULA01 = aula0101\
@@ -151,9 +174,20 @@ AULA02 = aula0202a\
 
 
 
+# Macro referente aos executaveis da aula pratica 03.
+
+AULA03 = aula0302a\
+	 aula0302b\
+	 aula0302c\
+	 aula0302d
+
+
+
+
+
 # Macro referente aos executaveis das aulas praticas de 01 a 10.
 
-EXECS = $(AULA01) $(AULA02) 
+EXECS = $(AULA01) $(AULA02) $(AULA03)
 
 
 
@@ -243,6 +277,30 @@ aula0202c: $(AULA0202COBJS)
 
 aula0202d: $(AULA0202DOBJS)
 	$(LD) $(LFLAGS) -o $@ $(AULA0202DOBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 03.
+
+aula03: $(AULA03)
+
+aula0302a: $(AULA0302AOBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0302AOBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+aula0302b: $(AULA0302BOBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0302BOBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+aula0302c: $(AULA0302COBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0302COBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+aula0302d: $(AULA0302DOBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0302DOBJS)
 	cp $@ $@-$(OS)-$(CC)
 
 
