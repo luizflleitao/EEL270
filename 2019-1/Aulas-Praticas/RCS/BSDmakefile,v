@@ -1,10 +1,30 @@
-head	1.11;
+head	1.15;
 access;
 symbols;
 locks
-	luiz.leitao:1.11; strict;
+	luiz.leitao:1.15; strict;
 comment	@# @;
 
+
+1.15
+date	2019.04.10.16.52.31;	author luiz.leitao;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2019.04.10.16.33.10;	author luiz.leitao;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2019.04.10.16.16.15;	author luiz.leitao;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2019.04.10.16.04.35;	author luiz.leitao;	state Exp;
+branches;
+next	1.11;
 
 1.11
 date	2019.04.05.02.45.01;	author luiz.leitao;	state Exp;
@@ -67,9 +87,9 @@ desc
 @
 
 
-1.11
+1.15
 log
-@Implementacao da Serie de Fibonacci utilizando o laco de repeticao while.
+@Implementacao da funcao CalcularMaximoDivisorComum utilizando o laco de repeticao while.
 @
 text
 @#
@@ -81,8 +101,20 @@ text
 # Autor: Luiz Fernando Loureiro Leitao
 #
 # $Author: luiz.leitao $
-# $Date: 2019/04/05 02:33:00 $
+# $Date: 2019/04/10 16:33:10 $
 # $Log: BSDmakefile,v $
+# Revision 1.14  2019/04/10 16:33:10  luiz.leitao
+# Implementacao da funcao CalcularMaximoDivisorComum utilizando o laco de repeticao for.
+#
+# Revision 1.13  2019/04/10 16:16:15  luiz.leitao
+# Implementacao da funcao CalcularMaximoDivisorComum utilizando o laco de repeticao do ... while.
+#
+# Revision 1.12  2019/04/10 16:04:35  luiz.leitao
+# Implementacao da funcao CalcularMaximoDivisorComum utilizando recursividade.
+#
+# Revision 1.11  2019/04/05 02:45:01  luiz.leitao
+# Implementacao da Serie de Fibonacci utilizando o laco de repeticao while.
+#
 # Revision 1.10  2019/04/05 02:33:00  luiz.leitao
 # Implementacao da Serie de Fibonacci utilizando o laco de repeticao for.
 #
@@ -183,6 +215,17 @@ AULA0202DOBJS = aula0201d.o aula0202.o
 
 
 
+# Macros referentes aos codigos-objeto da aula pratica 03.
+
+AULA0302AOBJS = aula0301a.o aula0302.o
+AULA0302BOBJS = aula0301b.o aula0302.o
+AULA0302COBJS = aula0301c.o aula0302.o
+AULA0302DOBJS = aula0301d.o aula0302.o
+
+
+
+
+
 # Macro referente aos executaveis da aula pratica 01.
 
 AULA01 = aula0101\
@@ -208,9 +251,20 @@ AULA02 = aula0202a\
 
 
 
+# Macro referente aos executaveis da aula pratica 03.
+
+AULA03 = aula0302a\
+	 aula0302b\
+	 aula0302c\
+	 aula0302d
+
+
+
+
+
 # Macro referente aos executaveis das aulas praticas de 01 a 10.
 
-EXECS = $(AULA01) $(AULA02)
+EXECS = $(AULA01) $(AULA02) $(AULA03)
 
 
 
@@ -306,6 +360,30 @@ aula0202d: $(AULA0202DOBJS)
 
 
 
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 03.
+
+aula03: $(AULA03)
+
+aula0302a: $(AULA0302AOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0302AOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0302b: $(AULA0302BOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0302BOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0302c: $(AULA0302COBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0302COBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0302d: $(AULA0302DOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0302DOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+
+
+
+
 # Rotulo referente a exclusao de todos os codigos-objeto e executaveis gerados, exceto os executaveis
 # que indicam a combinacao entre sistema operacional e compilador/link-editor.
 
@@ -349,6 +427,75 @@ clean-linux:
 
 
 # $RCSfile: BSDmakefile,v $
+@
+
+
+1.14
+log
+@Implementacao da funcao CalcularMaximoDivisorComum utilizando o laco de repeticao for.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/04/10 16:16:15 $
+d12 3
+d129 1
+d164 2
+a165 1
+	 aula0302c
+d283 4
+@
+
+
+1.13
+log
+@Implementacao da funcao CalcularMaximoDivisorComum utilizando o laco de repeticao do ... while.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/04/10 16:04:35 $
+d12 3
+d125 1
+d159 2
+a160 1
+	 aula0302b
+d274 4
+@
+
+
+1.12
+log
+@Implementacao da funcao CalcularMaximoDivisorComum utilizando recursividade.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/04/05 02:45:01 $
+d12 3
+d121 1
+d154 2
+a155 1
+AULA03 = aula0302a
+d265 4
+@
+
+
+1.11
+log
+@Implementacao da Serie de Fibonacci utilizando o laco de repeticao while.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/04/05 02:33:00 $
+d12 3
+d115 8
+d148 8
+d158 1
+a158 1
+EXECS = $(AULA01) $(AULA02)
+d248 12
 @
 
 
