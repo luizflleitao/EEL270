@@ -1,10 +1,30 @@
-head	1.15;
+head	1.19;
 access;
 symbols;
 locks
-	luiz.leitao:1.15; strict;
+	luiz.leitao:1.19; strict;
 comment	@# @;
 
+
+1.19
+date	2019.04.19.02.40.36;	author luiz.leitao;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2019.04.19.02.28.58;	author luiz.leitao;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2019.04.19.02.16.16;	author luiz.leitao;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2019.04.16.14.22.31;	author luiz.leitao;	state Exp;
+branches;
+next	1.15;
 
 1.15
 date	2019.04.10.16.51.54;	author luiz.leitao;	state Exp;
@@ -87,9 +107,9 @@ desc
 @
 
 
-1.15
+1.19
 log
-@Implementacao da funcao CalcularMaximoDivisorComum utilizando o laco de repeticao while.
+@Implementacao da funcao CalcularExponencial utilizando o laco de repeticao while.
 @
 text
 @#
@@ -101,8 +121,20 @@ text
 # Autor: Luiz Fernando Loureiro Leitao
 #
 # $Author: luiz.leitao $
-# $Date: 2019/04/10 16:32:41 $
+# $Date: 2019/04/19 02:28:58 $
 # $Log: GNUmakefile,v $
+# Revision 1.18  2019/04/19 02:28:58  luiz.leitao
+# Implementacao da funcao CalcularExponencial utilizando o laco de repeticao for.
+#
+# Revision 1.17  2019/04/19 02:16:16  luiz.leitao
+# Implementacao da funcao CalcularExponencial utilizando o laco de repeticao do ... while.
+#
+# Revision 1.16  2019/04/16 14:22:31  luiz.leitao
+# Implementacao da funcao CalcularExponencial utilizando recursividade.
+#
+# Revision 1.15  2019/04/10 16:51:54  luiz.leitao
+# Implementacao da funcao CalcularMaximoDivisorComum utilizando o laco de repeticao while.
+#
 # Revision 1.14  2019/04/10 16:32:41  luiz.leitao
 # Implementacao da funcao CalcularMaximoDivisorComum utilizando o laco de repeticao for.
 #
@@ -240,6 +272,17 @@ AULA0302DOBJS = aula0301d.o aula0302.o
 
 
 
+# Macros referentes aos codigos-objeto da aula pratica 04.
+
+AULA0402AOBJS = aula0401a.o aula0402.o
+AULA0402BOBJS = aula0401b.o aula0402.o
+AULA0402COBJS = aula0401c.o aula0402.o
+AULA0402DOBJS = aula0401d.o aula0402.o
+
+
+
+
+
 # Macro referente aos executaveis da aula pratica 01.
 
 AULA01 = aula0101\
@@ -276,9 +319,20 @@ AULA03 = aula0302a\
 
 
 
+# Macro referente aos executaveis da aula pratica 04.
+
+AULA04 = aula0402a\
+	 aula0402b\
+	 aula0402c\
+	 aula0402d
+
+
+
+
+
 # Macro referente aos executaveis das aulas praticas de 01 a 10.
 
-EXECS = $(AULA01) $(AULA02) $(AULA03)
+EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04)
 
 
 
@@ -398,6 +452,30 @@ aula0302d: $(AULA0302DOBJS)
 
 
 
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 04.
+
+aula04: $(AULA04)
+
+aula0402a: $(AULA0402AOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0402AOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0402b: $(AULA0402BOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0402BOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0402c: $(AULA0402COBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0402COBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0402d: $(AULA0402DOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0402DOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+
+
+
+
 # Rotulo referente a exclusao de todos os codigos-objeto e executaveis gerados, exceto os executaveis
 # que indicam a combinacao entre sistema operacional e compilador/link-editor.
 
@@ -442,6 +520,75 @@ clean-linux:
 
 
 # $RCSfile: GNUmakefile,v $
+@
+
+
+1.18
+log
+@Implementacao da funcao CalcularExponencial utilizando o laco de repeticao for.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/04/19 02:16:16 $
+d12 3
+d166 1
+d212 2
+a213 1
+	 aula0402c
+d355 4
+@
+
+
+1.17
+log
+@Implementacao da funcao CalcularExponencial utilizando o laco de repeticao do ... while.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/04/16 14:22:31 $
+d12 3
+d162 1
+d207 2
+a208 1
+	 aula0402b
+d346 4
+@
+
+
+1.16
+log
+@Implementacao da funcao CalcularExponencial utilizando recursividade.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/04/10 16:51:54 $
+d12 3
+d158 1
+d202 2
+a203 1
+AULA04 = aula0402a
+d337 4
+@
+
+
+1.15
+log
+@Implementacao da funcao CalcularMaximoDivisorComum utilizando o laco de repeticao while.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/04/10 16:32:41 $
+d12 3
+d152 8
+d196 8
+d206 1
+a206 1
+EXECS = $(AULA01) $(AULA02) $(AULA03)
+d320 12
 @
 
 

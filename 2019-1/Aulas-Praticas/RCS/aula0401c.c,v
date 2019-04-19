@@ -1,0 +1,92 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.1
+date	2019.04.19.02.28.53;	author luiz.leitao;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@/*
+ * Universidade Federal do Rio de Janeiro
+ * Escola Politecnica
+ * Departamento de Eletronica e de Computacao
+ * EEL270 - Computacao II - Turma 2019/1
+ * Prof. Marcelo Luiz Drumond Lanza
+ * Autor: Luiz Fernando Loureiro Leitao
+ *
+ * $Author$
+ * $Date$
+ * $Log$
+ */
+
+
+
+
+
+
+
+
+
+
+/* Inclusao da biblioteca personalizada para o trabalho. */
+
+#include "aula0401.h"
+
+
+
+
+
+/* Implementacao da funcao CalcularExponencial utilizando o laco de repeticao for. */
+
+ld
+CalcularExponencial(double base, int expoente)
+{
+
+  unsigned indice;
+  ld resultado = 1;
+
+
+  if (expoente == 0)
+    return 1;
+
+
+  if (expoente < 0)
+  {
+    base = (1 / base);
+    expoente = (expoente * (-1));
+  } /* if */
+
+
+  for (indice = 0; indice < expoente; indice++)
+    resultado *= base;
+
+
+  return resultado;
+
+} /* CalcularExponencial */
+
+
+
+
+
+
+
+
+
+
+/* $RCSfile$ */
+@
