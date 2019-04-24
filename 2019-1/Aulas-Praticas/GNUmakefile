@@ -7,8 +7,23 @@
 # Autor: Luiz Fernando Loureiro Leitao
 #
 # $Author: luiz.leitao $
-# $Date: 2019/04/19 02:40:36 $
+# $Date: 2019/04/24 07:41:59 $
 # $Log: GNUmakefile,v $
+# Revision 1.24  2019/04/24 07:41:59  luiz.leitao
+# Implementacao da funcao CalcularSerieHarmonicaAlternada utilizando recursividade e a funcao pow.
+#
+# Revision 1.23  2019/04/24 07:25:06  luiz.leitao
+# Implementacao da funcao CalcularSerieHarmonicaAlternada utilizando o laco de repeticao while e a funcao CalcularExponencial.
+#
+# Revision 1.22  2019/04/24 07:10:18  luiz.leitao
+# Implementacao da funcao CalcularSerieHarmonicaAlternada utilizando o laco de repeticao for e a funcao CalcularExponencial.
+#
+# Revision 1.21  2019/04/24 06:56:09  luiz.leitao
+# Implementacao da funcao CalcularSerieHarmonicaAlternada utilizando o laco de repeticao do ... while e a funcao CalcularExponencial.
+#
+# Revision 1.20  2019/04/24 06:42:46  luiz.leitao
+# Implementacao da funcao CalcularSerieHarmonicaAlternada utilizando recursividade e a funcao CalcularExponencial.
+#
 # Revision 1.19  2019/04/19 02:40:36  luiz.leitao
 # Implementacao da funcao CalcularExponencial utilizando o laco de repeticao while.
 #
@@ -117,9 +132,16 @@ endif
 
 # Macros referentes aos argumentos passados tanto na compilacao quanto na link-edicao.
 
-
 CFLAGS = -Wall -std=c99
 LFLAGS = -Wall -std=c99
+
+
+
+
+
+# Macro referente ao comando da criacao da biblioteca estatica.
+
+AR = ar
 
 
 
@@ -172,6 +194,27 @@ AULA0402DOBJS = aula0401d.o aula0402.o
 
 
 
+# Macros referentes aos codigos-objeto da aula pratica 05.
+
+AULA0502AOBJS = aula0501a.o aula0502.o
+AULA0502BOBJS = aula0501b.o aula0502.o
+AULA0502COBJS = aula0501c.o aula0502.o
+AULA0502DOBJS = aula0501d.o aula0502.o
+AULA0502EOBJS = aula0501e.o aula0502.o
+
+
+
+
+
+# Macros referentes a criacao da biblioteca estatica.
+
+LIBMATEMATICAOBJS = aula0401a.o
+LIBMATEMATICA = libmatematica.a
+
+
+
+
+
 # Macro referente aos executaveis da aula pratica 01.
 
 AULA01 = aula0101\
@@ -219,9 +262,29 @@ AULA04 = aula0402a\
 
 
 
+# Macro referente aos executaveis da aula pratica 05.
+
+AULA05 = aula0502a\
+	 aula0502b\
+	 aula0502c\
+	 aula0502d\
+	 aula0502e
+
+
+
+
+
 # Macro referente aos executaveis das aulas praticas de 01 a 10.
 
-EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04)
+EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04) $(AULA05)
+
+
+
+
+
+# Macro referente as bibliotecas estaticas.
+
+LIBS = $(LIBMATEMATICA)
 
 
 
@@ -229,7 +292,7 @@ EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04)
 
 # Macro referente aos executaveis e as bibliotecas das aulas praticas de 01 a 10.
 
-ALL = $(EXECS)
+ALL = $(EXECS) $(LIBS)
 
 
 
@@ -360,6 +423,43 @@ aula0402c: $(AULA0402COBJS)
 aula0402d: $(AULA0402DOBJS)
 	$(LD) $(LFLAGS) -o $@ $(AULA0402DOBJS)
 	cp $@ $@-$(OS)-$(CC)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 05.
+
+aula05: $(AULA05)
+
+aula0502a: $(AULA0502AOBJS) $(LIBMATEMATICA)
+	$(LD) $(LFLAGS) -o $@ $(AULA0502AOBJS) -L. -lmatematica
+	cp $@ $@-$(OS)-$(CC)
+
+aula0502b: $(AULA0502BOBJS) $(LIBMATEMATICA)
+	$(LD) $(LFLAGS) -o $@ $(AULA0502BOBJS) -L. -lmatematica
+	cp $@ $@-$(OS)-$(CC)
+
+aula0502c: $(AULA0502COBJS) $(LIBMATEMATICA)
+	$(LD) $(LFLAGS) -o $@ $(AULA0502COBJS) -L. -lmatematica
+	cp $@ $@-$(OS)-$(CC)
+
+aula0502d: $(AULA0502DOBJS) $(LIBMATEMATICA)
+	$(LD) $(LFLAGS) -o $@ $(AULA0502DOBJS) -L. -lmatematica
+	cp $@ $@-$(OS)-$(CC)
+
+aula0502e: $(AULA0502EOBJS) $(LIBMATEMATICA)
+	$(LD) $(LFLAGS) -o $@ $(AULA0502EOBJS) -L. -lm
+	cp $@ $@-$(OS)-$(CC)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da biblioteca estatica.
+
+libmatematica.a: $(LIBMATEMATICAOBJS)
+	$(AR) -r $@ $(LIBMATEMATICAOBJS)
 
 
 
