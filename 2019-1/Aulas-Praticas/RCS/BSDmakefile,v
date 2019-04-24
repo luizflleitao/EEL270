@@ -1,10 +1,35 @@
-head	1.19;
+head	1.24;
 access;
 symbols;
 locks
-	luiz.leitao:1.19; strict;
+	luiz.leitao:1.24; strict;
 comment	@# @;
 
+
+1.24
+date	2019.04.24.07.42.38;	author luiz.leitao;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2019.04.24.07.25.52;	author luiz.leitao;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2019.04.24.07.11.06;	author luiz.leitao;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2019.04.24.06.57.10;	author luiz.leitao;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2019.04.24.06.43.49;	author luiz.leitao;	state Exp;
+branches;
+next	1.19;
 
 1.19
 date	2019.04.19.02.41.01;	author luiz.leitao;	state Exp;
@@ -107,9 +132,9 @@ desc
 @
 
 
-1.19
+1.24
 log
-@Implementacao da funcao CalcularExponencial utilizando o laco de repeticao while.
+@Implementacao da funcao CalcularSerieHarmonicaAlternada utilizando recursividade e a funcao pow.
 @
 text
 @#
@@ -121,8 +146,23 @@ text
 # Autor: Luiz Fernando Loureiro Leitao
 #
 # $Author: luiz.leitao $
-# $Date: 2019/04/19 02:29:24 $
+# $Date: 2019/04/24 07:25:52 $
 # $Log: BSDmakefile,v $
+# Revision 1.23  2019/04/24 07:25:52  luiz.leitao
+# Implementacao da funcao CalcularSerieHarmonicaAlternada utilizando o laco de repeticao while e a funcao CalcularExponencial.
+#
+# Revision 1.22  2019/04/24 07:11:06  luiz.leitao
+# Implementacao da funcao CalcularSerieHarmonicaAlternada utilizando o laco de repeticao for e a funcao CalcularExponencial.
+#
+# Revision 1.21  2019/04/24 06:57:10  luiz.leitao
+# Implementacao da funcao CalcularSerieHarmonicaAlternada utilizando o laco de repeticao do ... while e a funcao CalcularExponencial.
+#
+# Revision 1.20  2019/04/24 06:43:49  luiz.leitao
+# Implementacao da funcao CalcularSerieHarminicaAlternada utilizando recursividade e a funcao CalcularExponencial.
+#
+# Revision 1.19  2019/04/19 02:41:01  luiz.leitao
+# Implementacao da funcao CalcularExponencial utilizando o laco de repeticao while.
+#
 # Revision 1.18  2019/04/19 02:29:24  luiz.leitao
 # Implementacao da funcao CalcularExponencial utilizando o laco de repeticao for.
 #
@@ -214,9 +254,16 @@ LD = gcc
 
 # Macros referentes aos argumentos passados tanto na compilacao quanto na link-edicao.
 
-
 CFLAGS = -Wall -std=c99
 LFLAGS = -Wall -std=c99
+
+
+
+
+
+# Macro referente ao comando da criacao da biblioteca estatica.
+
+AR = ar
 
 
 
@@ -269,6 +316,27 @@ AULA0402DOBJS = aula0401d.o aula0402.o
 
 
 
+# Macros referentes aos codigos-objeto da aula pratica 05.
+
+AULA0502AOBJS = aula0501a.o aula0502.o
+AULA0502BOBJS = aula0501b.o aula0502.o
+AULA0502COBJS = aula0501c.o aula0502.o
+AULA0502DOBJS = aula0501d.o aula0502.o
+AULA0502EOBJS = aula0501e.o aula0502.o
+
+
+
+
+
+# Macros referentes a criacao da biblioteca estatica.
+
+LIBMATEMATICAOBJS = aula0401a.o
+LIBMATEMATICA = libmatematica.a
+
+
+
+
+
 # Macro referente aos executaveis da aula pratica 01.
 
 AULA01 = aula0101\
@@ -316,9 +384,29 @@ AULA04 = aula0402a\
 
 
 
+# Macro referente aos executaveis da aula pratica 05.
+
+AULA05 = aula0502a\
+	 aula0502b\
+	 aula0502c\
+	 aula0502d\
+	 aula0502e
+
+
+
+
+
 # Macro referente aos executaveis das aulas praticas de 01 a 10.
 
-EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04)
+EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04) $(AULA05)
+
+
+
+
+
+# Macro referente as bibliotecas estaticas.
+
+LIBS = $(LIBMATEMATICA)
 
 
 
@@ -326,7 +414,7 @@ EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04)
 
 # Macro referente aos executaveis e as bibliotecas das aulas praticas de 01 a 10.
 
-ALL = $(EXECS)
+ALL = $(EXECS) $(LIBS)
 
 
 
@@ -462,6 +550,43 @@ aula0402d: $(AULA0402DOBJS)
 
 
 
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 05.
+
+aula05: $(AULA05)
+
+aula0502a: $(AULA0502AOBJS) $(LIBMATEMATICA)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0502AOBJS) -L. -lmatematica
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0502b: $(AULA0502BOBJS) $(LIBMATEMATICA)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0502BOBJS) -L. -lmatematica
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0502c: $(AULA0502COBJS) $(LIBMATEMATICA)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0502COBJS) -L. -lmatematica
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0502d: $(AULA0502DOBJS) $(LIBMATEMATICA)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0502DOBJS) -L. -lmatematica
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0502e: $(AULA0502EOBJS) $(LIBMATEMATICA)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0502EOBJS) -L. -lm
+	cp $@@ $@@-$(OS)-$(CC)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da biblioteca estatica.
+
+libmatematica.a: $(LIBMATEMATICAOBJS)
+	$(AR) -r $@@ $(LIBMATEMATICAOBJS)
+
+
+
+
+
 # Rotulo referente a exclusao de todos os codigos-objeto e executaveis gerados, exceto os executaveis
 # que indicam a combinacao entre sistema operacional e compilador/link-editor.
 
@@ -505,6 +630,98 @@ clean-linux:
 
 
 # $RCSfile: BSDmakefile,v $
+@
+
+
+1.23
+log
+@Implementacao da funcao CalcularSerieHarmonicaAlternada utilizando o laco de repeticao while e a funcao CalcularExponencial.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/04/24 07:11:06 $
+d12 3
+d186 1
+d253 2
+a254 1
+	 aula0502d
+d432 4
+@
+
+
+1.22
+log
+@Implementacao da funcao CalcularSerieHarmonicaAlternada utilizando o laco de repeticao for e a funcao CalcularExponencial.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/04/24 06:57:10 $
+d12 3
+d182 1
+d248 2
+a249 1
+	 aula0502c
+d423 4
+@
+
+
+1.21
+log
+@Implementacao da funcao CalcularSerieHarmonicaAlternada utilizando o laco de repeticao do ... while e a funcao CalcularExponencial.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/04/24 06:43:49 $
+d12 3
+d178 1
+d243 2
+a244 1
+	 aula0502b
+d414 4
+@
+
+
+1.20
+log
+@Implementacao da funcao CalcularSerieHarminicaAlternada utilizando recursividade e a funcao CalcularExponencial.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/04/19 02:41:01 $
+d12 3
+d174 1
+d238 2
+a239 1
+AULA05 = aula0502a
+d405 4
+@
+
+
+1.19
+log
+@Implementacao da funcao CalcularExponencial utilizando o laco de repeticao while.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/04/19 02:29:24 $
+d12 3
+a105 1
+
+d113 8
+d168 17
+d232 8
+d242 9
+a250 1
+EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04)
+d258 1
+a258 1
+ALL = $(EXECS)
+d389 21
 @
 
 
