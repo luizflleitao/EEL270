@@ -1,10 +1,50 @@
-head	1.24;
+head	1.32;
 access;
 symbols;
 locks
-	luiz.leitao:1.24; strict;
+	luiz.leitao:1.32; strict;
 comment	@# @;
 
+
+1.32
+date	2019.05.09.20.54.09;	author luiz.leitao;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2019.05.09.20.31.40;	author luiz.leitao;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2019.05.09.18.20.10;	author luiz.leitao;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2019.05.09.17.57.25;	author luiz.leitao;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2019.05.08.23.21.41;	author luiz.leitao;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2019.05.08.22.52.02;	author luiz.leitao;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2019.05.08.18.19.06;	author luiz.leitao;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2019.05.08.17.42.39;	author luiz.leitao;	state Exp;
+branches;
+next	1.24;
 
 1.24
 date	2019.04.24.07.42.38;	author luiz.leitao;	state Exp;
@@ -132,9 +172,9 @@ desc
 @
 
 
-1.24
+1.32
 log
-@Implementacao da funcao CalcularSerieHarmonicaAlternada utilizando recursividade e a funcao pow.
+@Implementacao do programa de testes da funcao ValidarPisPasep passando 1 argumento na linha de comando.
 @
 text
 @#
@@ -146,8 +186,32 @@ text
 # Autor: Luiz Fernando Loureiro Leitao
 #
 # $Author: luiz.leitao $
-# $Date: 2019/04/24 07:25:52 $
+# $Date: 2019/05/09 20:31:40 $
 # $Log: BSDmakefile,v $
+# Revision 1.31  2019/05/09 20:31:40  luiz.leitao
+# Implementacao do programa de testes da funcao ValidarPisPasep passando 11 argumentos na linha de comando.
+#
+# Revision 1.30  2019/05/09 18:20:10  luiz.leitao
+# Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep passando 1 argumento na linha de comando.
+#
+# Revision 1.29  2019/05/09 17:57:25  luiz.leitao
+# Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep passando 10 argumentos na linha de comando.
+#
+# Revision 1.28  2019/05/08 23:21:41  luiz.leitao
+# Implementacao do programa de testes da funcao ValidarPisPasep passando 1 argumento na linha de comando.
+#
+# Revision 1.27  2019/05/08 22:52:02  luiz.leitao
+# Implementacao do programa de testes da funcao ValidarPisPasep passando 11 argumentos na linha de comando.
+#
+# Revision 1.26  2019/05/08 18:19:06  luiz.leitao
+# Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep passando 1 argumento na linha de comando.
+#
+# Revision 1.25  2019/05/08 17:42:39  luiz.leitao
+# Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep passando 10 argumentos na linha de comando.
+#
+# Revision 1.24  2019/04/24 07:42:38  luiz.leitao
+# Implementacao da funcao CalcularSerieHarmonicaAlternada utilizando recursividade e a funcao pow.
+#
 # Revision 1.23  2019/04/24 07:25:52  luiz.leitao
 # Implementacao da funcao CalcularSerieHarmonicaAlternada utilizando o laco de repeticao while e a funcao CalcularExponencial.
 #
@@ -328,6 +392,21 @@ AULA0502EOBJS = aula0501e.o aula0502.o
 
 
 
+# Macros referentes aos codigos-objeto da aula pratica 06.
+
+AULA0602AOBJS = aula0601.o aula0602a.o
+AULA0602BOBJS = aula0601.o aula0602b.o
+AULA0603AOBJS = aula0601.o aula0603a.o
+AULA0603BOBJS = aula0601.o aula0603b.o
+AULA0605AOBJS = aula0604.o aula0605a.o
+AULA0605BOBJS = aula0604.o aula0605b.o
+AULA0606AOBJS = aula0604.o aula0606a.o
+AULA0606BOBJS = aula0604.o aula0606b.o
+
+
+
+
+
 # Macros referentes a criacao da biblioteca estatica.
 
 LIBMATEMATICAOBJS = aula0401a.o
@@ -396,9 +475,25 @@ AULA05 = aula0502a\
 
 
 
+# Macro referente aos executaveis da aula pratica 06.
+
+AULA06 = aula0602a\
+	 aula0602b\
+	 aula0603a\
+	 aula0603b\
+	 aula0605a\
+	 aula0605b\
+	 aula0606a\
+	 aula0606b
+
+
+
+
+
 # Macro referente aos executaveis das aulas praticas de 01 a 10.
 
-EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04) $(AULA05)
+EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04) $(AULA05)\
+	$(AULA06)
 
 
 
@@ -578,6 +673,46 @@ aula0502e: $(AULA0502EOBJS) $(LIBMATEMATICA)
 
 
 
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 06.
+
+aula06: $(AULA06)
+
+aula0602a: $(AULA0602AOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0602AOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0602b: $(AULA0602BOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0602BOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0603a: $(AULA0603AOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0603AOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0603b: $(AULA0603BOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0603BOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0605a: $(AULA0605AOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0605AOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0605b: $(AULA0605BOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0605BOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0606a: $(AULA0606AOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0606AOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0606b: $(AULA0606BOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0606BOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+
+
+
+
 # Rotulos referentes as dependencias (valores das macros) da biblioteca estatica.
 
 libmatematica.a: $(LIBMATEMATICAOBJS)
@@ -630,6 +765,143 @@ clean-linux:
 
 
 # $RCSfile: BSDmakefile,v $
+@
+
+
+1.31
+log
+@Implementacao do programa de testes da funcao ValidarPisPasep passando 11 argumentos na linha de comando.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/05/09 18:20:10 $
+d12 3
+d225 1
+d307 2
+a308 1
+	 aula0606a
+d527 4
+@
+
+
+1.30
+log
+@Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep passando 1 argumento na linha de comando.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/05/09 17:57:25 $
+d12 3
+d221 1
+d302 2
+a303 1
+	 aula0605b
+d518 4
+@
+
+
+1.29
+log
+@Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep passando 10 argumentos na linha de comando.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/05/08 23:21:41 $
+d12 3
+d217 1
+d297 2
+a298 1
+	 aula0605a
+d509 4
+@
+
+
+1.28
+log
+@Implementacao do programa de testes da funcao ValidarPisPasep passando 1 argumento na linha de comando.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/05/08 22:52:02 $
+d12 3
+d213 1
+d292 2
+a293 1
+	 aula0603b
+d500 4
+@
+
+
+1.27
+log
+@Implementacao do programa de testes da funcao ValidarPisPasep passando 11 argumentos na linha de comando.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/05/08 18:19:06 $
+d12 3
+d209 1
+d287 2
+a288 1
+	 aula0603a
+d491 4
+@
+
+
+1.26
+log
+@Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep passando 1 argumento na linha de comando.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/05/08 17:42:39 $
+d12 3
+d205 1
+d282 2
+a283 1
+	 aula0602b
+d482 4
+@
+
+
+1.25
+log
+@Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep passando 10 argumentos na linha de comando.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/04/24 07:42:38 $
+d12 3
+d201 1
+d277 2
+a278 1
+AULA06 = aula0602a
+d473 4
+@
+
+
+1.24
+log
+@Implementacao da funcao CalcularSerieHarmonicaAlternada utilizando recursividade e a funcao pow.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/04/24 07:25:52 $
+d12 3
+d195 8
+d271 8
+d281 2
+a282 1
+EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04) $(AULA05)
+d456 12
 @
 
 
