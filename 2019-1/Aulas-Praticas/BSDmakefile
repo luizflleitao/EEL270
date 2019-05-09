@@ -7,8 +7,32 @@
 # Autor: Luiz Fernando Loureiro Leitao
 #
 # $Author: luiz.leitao $
-# $Date: 2019/04/24 07:42:38 $
+# $Date: 2019/05/09 20:54:09 $
 # $Log: BSDmakefile,v $
+# Revision 1.32  2019/05/09 20:54:09  luiz.leitao
+# Implementacao do programa de testes da funcao ValidarPisPasep passando 1 argumento na linha de comando.
+#
+# Revision 1.31  2019/05/09 20:31:40  luiz.leitao
+# Implementacao do programa de testes da funcao ValidarPisPasep passando 11 argumentos na linha de comando.
+#
+# Revision 1.30  2019/05/09 18:20:10  luiz.leitao
+# Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep passando 1 argumento na linha de comando.
+#
+# Revision 1.29  2019/05/09 17:57:25  luiz.leitao
+# Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep passando 10 argumentos na linha de comando.
+#
+# Revision 1.28  2019/05/08 23:21:41  luiz.leitao
+# Implementacao do programa de testes da funcao ValidarPisPasep passando 1 argumento na linha de comando.
+#
+# Revision 1.27  2019/05/08 22:52:02  luiz.leitao
+# Implementacao do programa de testes da funcao ValidarPisPasep passando 11 argumentos na linha de comando.
+#
+# Revision 1.26  2019/05/08 18:19:06  luiz.leitao
+# Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep passando 1 argumento na linha de comando.
+#
+# Revision 1.25  2019/05/08 17:42:39  luiz.leitao
+# Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep passando 10 argumentos na linha de comando.
+#
 # Revision 1.24  2019/04/24 07:42:38  luiz.leitao
 # Implementacao da funcao CalcularSerieHarmonicaAlternada utilizando recursividade e a funcao pow.
 #
@@ -192,6 +216,21 @@ AULA0502EOBJS = aula0501e.o aula0502.o
 
 
 
+# Macros referentes aos codigos-objeto da aula pratica 06.
+
+AULA0602AOBJS = aula0601.o aula0602a.o
+AULA0602BOBJS = aula0601.o aula0602b.o
+AULA0603AOBJS = aula0601.o aula0603a.o
+AULA0603BOBJS = aula0601.o aula0603b.o
+AULA0605AOBJS = aula0604.o aula0605a.o
+AULA0605BOBJS = aula0604.o aula0605b.o
+AULA0606AOBJS = aula0604.o aula0606a.o
+AULA0606BOBJS = aula0604.o aula0606b.o
+
+
+
+
+
 # Macros referentes a criacao da biblioteca estatica.
 
 LIBMATEMATICAOBJS = aula0401a.o
@@ -260,9 +299,25 @@ AULA05 = aula0502a\
 
 
 
+# Macro referente aos executaveis da aula pratica 06.
+
+AULA06 = aula0602a\
+	 aula0602b\
+	 aula0603a\
+	 aula0603b\
+	 aula0605a\
+	 aula0605b\
+	 aula0606a\
+	 aula0606b
+
+
+
+
+
 # Macro referente aos executaveis das aulas praticas de 01 a 10.
 
-EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04) $(AULA05)
+EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04) $(AULA05)\
+	$(AULA06)
 
 
 
@@ -436,6 +491,46 @@ aula0502d: $(AULA0502DOBJS) $(LIBMATEMATICA)
 
 aula0502e: $(AULA0502EOBJS) $(LIBMATEMATICA)
 	$(LD) $(LFLAGS) -o $@ $(AULA0502EOBJS) -L. -lm
+	cp $@ $@-$(OS)-$(CC)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 06.
+
+aula06: $(AULA06)
+
+aula0602a: $(AULA0602AOBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0602AOBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+aula0602b: $(AULA0602BOBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0602BOBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+aula0603a: $(AULA0603AOBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0603AOBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+aula0603b: $(AULA0603BOBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0603BOBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+aula0605a: $(AULA0605AOBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0605AOBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+aula0605b: $(AULA0605BOBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0605BOBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+aula0606a: $(AULA0606AOBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0606AOBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+aula0606b: $(AULA0606BOBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0606BOBJS)
 	cp $@ $@-$(OS)-$(CC)
 
 
