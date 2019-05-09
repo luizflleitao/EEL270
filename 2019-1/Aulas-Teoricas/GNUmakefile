@@ -19,14 +19,14 @@ LD = gcc
 
 ifeq ($(cc), GCC)
 CC = gcc
-LD = gcc
 endif
 
 ifeq ($(cc), CLANG)
 CC = clang
-LD = clang
 endif
- 
+
+LD = $(CC)
+
 CFLAGS = -Wall -std=c99
 LFLAGS = -Wall -std=c99
 

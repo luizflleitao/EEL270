@@ -16,13 +16,15 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "exemplo_025.h"
 
-#define NUMERO_ARGUMENTOS		COMPRIMENTO_DRE + 1
+#define NUMERO_ARGUMENTOS		2
 
 #define OK				0
 #define NUMERO_ARGUMENTOS_INVALIDO	1
-#define ARGUMENTO_INVALIDO		2	
+#define COMPRIMENTO_DRE_INVALIDO	2
+#define ARGUMENTO_INVALIDO		3	
 
 #define EOS				'\0'
 
@@ -32,39 +34,28 @@ main (int argc, char *argv [])
 
   byte dre [COMPRIMENTO_DRE];
   byte indice;
-  unsigned long long auxiliar;
-  char *validacao;
 
   if (argc != NUMERO_ARGUMENTOS)
   {
-    printf ("Uso: %s <d1> <d2> <d3> <d4> <d5> <d6> <d7> <d8> <dv>\n", argv [0]);
+    printf ("Uso: %s <dre>\n", argv [0]);
     exit (NUMERO_ARGUMENTOS_INVALIDO);
   }	  
 
+  if (strlen (argv [1]) != COMPRIMENTO_DRE)
+  {
+    printf ("O DRE deve ter %i digitos\n", COMPRIMENTO_DRE);
+    exit (COMPRIMENTO_DRE_INVALIDO);
+  }
+
   for (indice = 0; indice < COMPRIMENTO_DRE; indice++)
   {
-    if (argv [indice + 1][0] == '-')
+    if (argv [1][indice] < '0' || argv [1][indice] > '9')
     {
       printf ("Argumento negativo. Entre com numeros entre 0 e 9\n");
       exit (ARGUMENTO_INVALIDO);
     } 
 
-    auxiliar = strtoull (argv [indice + 1], &validacao, 10);
-
-    if (*validacao != EOS)
-    {
-      printf ("Argumento contem caractere invalido: \'%c\'\n", *validacao);
-      printf ("Argumentos devem ser numeros entre 0 e 9\n");
-      exit (ARGUMENTO_INVALIDO);
-    }
-
-    if (auxiliar > 255)
-    {
-      printf ("Argumentos devem ser numeros entre 0 e 9\n");
-      exit (ARGUMENTO_INVALIDO);
-    }
-    
-    dre [indice] = (byte) auxiliar;
+    dre [indice] = (byte) (argv [1][indice] - '0');
   }
 
   if (ValidarDre (dre) == falso)
