@@ -7,8 +7,11 @@
 # Autor: Luiz Fernando Loureiro Leitao
 #
 # $Author: luiz.leitao $
-# $Date: 2019/05/09 20:53:38 $
+# $Date: 2019/05/12 01:27:40 $
 # $Log: GNUmakefile,v $
+# Revision 1.33  2019/05/12 01:27:40  luiz.leitao
+# Implementacao do programa de testes para multiplicar uma matriz (5 x 3) por uma (3 x 4).
+#
 # Revision 1.32  2019/05/09 20:53:38  luiz.leitao
 # Implementacao do programa de testes da funcao ValidarPisPasep passando 1 argumento na linha de comando.
 #
@@ -245,6 +248,14 @@ AULA0606BOBJS = aula0604.o aula0606b.o
 
 
 
+# Macros referentes aos codigos-objeto da aula pratica 07.
+
+AULA0702OBJS = aula0701.o aula0702.o
+
+
+
+
+
 # Macros referentes a criacao da biblioteca estatica.
 
 LIBMATEMATICAOBJS = aula0401a.o
@@ -328,10 +339,18 @@ AULA06 = aula0602a\
 
 
 
+# Macro referente aos executaveis da aula pratica 07.
+
+AULA07 = aula0702
+
+
+
+
+
 # Macro referente aos executaveis das aulas praticas de 01 a 10.
 
 EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04) $(AULA05)\
-	$(AULA06)
+	$(AULA06) $(AULA07)
 
 
 
@@ -545,6 +564,18 @@ aula0606a: $(AULA0606AOBJS)
 
 aula0606b: $(AULA0606BOBJS)
 	$(LD) $(LFLAGS) -o $@ $(AULA0606BOBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 07.
+
+aula07: $(AULA07)
+
+aula0702: $(AULA0702OBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0702OBJS)
 	cp $@ $@-$(OS)-$(CC)
 
 
