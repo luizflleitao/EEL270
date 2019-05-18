@@ -1,10 +1,20 @@
-head	1.32;
+head	1.34;
 access;
 symbols;
 locks
-	luiz.leitao:1.32; strict;
+	luiz.leitao:1.34; strict;
 comment	@# @;
 
+
+1.34
+date	2019.05.18.21.11.43;	author luiz.leitao;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2019.05.12.01.27.40;	author luiz.leitao;	state Exp;
+branches;
+next	1.32;
 
 1.32
 date	2019.05.09.20.53.38;	author luiz.leitao;	state Exp;
@@ -172,9 +182,11 @@ desc
 @
 
 
-1.32
+1.34
 log
-@Implementacao do programa de testes da funcao ValidarPisPasep passando 1 argumento na linha de comando.
+@Criacao do cabecalho <aula0801.h>.
+Implementacao das funcoes MostrarMonitor, LimparMonitor, DesenharRetangulo e PreencherPoligono.
+Implementacao do programa de testes para o preenchimento de uma determinada area de um monitor.
 @
 text
 @#
@@ -186,8 +198,14 @@ text
 # Autor: Luiz Fernando Loureiro Leitao
 #
 # $Author: luiz.leitao $
-# $Date: 2019/05/09 20:31:02 $
+# $Date: 2019/05/12 01:27:40 $
 # $Log: GNUmakefile,v $
+# Revision 1.33  2019/05/12 01:27:40  luiz.leitao
+# Implementacao do programa de testes para multiplicar uma matriz (5 x 3) por uma (3 x 4).
+#
+# Revision 1.32  2019/05/09 20:53:38  luiz.leitao
+# Implementacao do programa de testes da funcao ValidarPisPasep passando 1 argumento na linha de comando.
+#
 # Revision 1.31  2019/05/09 20:31:02  luiz.leitao
 # Implementacao do programa de testes da funcao ValidarPisPasep passando 11 argumentos na linha de comando.
 #
@@ -421,6 +439,22 @@ AULA0606BOBJS = aula0604.o aula0606b.o
 
 
 
+# Macros referentes aos codigos-objeto da aula pratica 07.
+
+AULA0702OBJS = aula0701.o aula0702.o
+
+
+
+
+
+# Macros referentes aos codigos-objeto da aula pratica 08.
+
+AULA0802OBJS = aula0801.o aula0802.o
+
+
+
+
+
 # Macros referentes a criacao da biblioteca estatica.
 
 LIBMATEMATICAOBJS = aula0401a.o
@@ -504,10 +538,26 @@ AULA06 = aula0602a\
 
 
 
+# Macro referente aos executaveis da aula pratica 07.
+
+AULA07 = aula0702
+
+
+
+
+
+# Macro referente aos executaveis da aula pratica 08.
+
+AULA08 = aula0802
+
+
+
+
+
 # Macro referente aos executaveis das aulas praticas de 01 a 10.
 
 EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04) $(AULA05)\
-	$(AULA06)
+	$(AULA06) $(AULA07) $(AULA08)
 
 
 
@@ -727,6 +777,30 @@ aula0606b: $(AULA0606BOBJS)
 
 
 
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 07.
+
+aula07: $(AULA07)
+
+aula0702: $(AULA0702OBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0702OBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 08.
+
+aula08: $(AULA08)
+
+aula0802: $(AULA0802OBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0802OBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+
+
+
+
 # Rotulos referentes as dependencias (valores das macros) da biblioteca estatica.
 
 libmatematica.a: $(LIBMATEMATICAOBJS)
@@ -780,6 +854,42 @@ clean-linux:
 
 
 # $RCSfile: GNUmakefile,v $
+@
+
+
+1.33
+log
+@Implementacao do programa de testes para multiplicar uma matriz (5 x 3) por uma (3 x 4).
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/05/09 20:53:38 $
+d12 3
+d259 8
+d358 8
+d369 1
+a369 1
+	$(AULA06) $(AULA07)
+d595 12
+@
+
+
+1.32
+log
+@Implementacao do programa de testes da funcao ValidarPisPasep passando 1 argumento na linha de comando.
+@
+text
+@d10 1
+a10 1
+# $Date: 2019/05/09 20:31:02 $
+d12 3
+d248 8
+d339 8
+d350 1
+a350 1
+	$(AULA06)
+d564 12
 @
 
 
