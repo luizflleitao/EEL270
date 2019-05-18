@@ -7,8 +7,13 @@
 # Autor: Luiz Fernando Loureiro Leitao
 #
 # $Author: luiz.leitao $
-# $Date: 2019/05/12 01:28:26 $
+# $Date: 2019/05/18 21:16:03 $
 # $Log: BSDmakefile,v $
+# Revision 1.34  2019/05/18 21:16:03  luiz.leitao
+# Criacao do cabecalho <aula0801.h>.
+# Implementacao das funcoes MostrarMonitor, LimparMonitor, DesenharRetangulo e PreencherPoligono.
+# Implementacao do programa de testes para o preenchimento de uma determinada area de um monitor.
+#
 # Revision 1.33  2019/05/12 01:28:26  luiz.leitao
 # Implementacao do programa de testes para multiplicar uma matriz (5 x 3) por uma (3 x 4).
 #
@@ -242,6 +247,14 @@ AULA0702OBJS = aula0701.o aula0702.o
 
 
 
+# Macros referentes aos codigos-objeto da aula pratica 08.
+
+AULA0802OBJS = aula0801.o aula0802.o
+
+
+
+
+
 # Macros referentes a criacao da biblioteca estatica.
 
 LIBMATEMATICAOBJS = aula0401a.o
@@ -333,10 +346,18 @@ AULA07 = aula0702
 
 
 
+# Macro referente aos executaveis da aula pratica 08.
+
+AULA08 = aula0802
+
+
+
+
+
 # Macro referente aos executaveis das aulas praticas de 01 a 10.
 
 EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04) $(AULA05)\
-	$(AULA06) $(AULA07)
+	$(AULA06) $(AULA07) $(AULA08)
 
 
 
@@ -562,6 +583,18 @@ aula07: $(AULA07)
 
 aula0702: $(AULA0702OBJS)
 	$(LD) $(LFLAGS) -o $@ $(AULA0702OBJS)
+	cp $@ $@-$(OS)-$(CC)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 08.
+
+aula08: $(AULA08)
+
+aula0802: $(AULA0802OBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0802OBJS)
 	cp $@ $@-$(OS)-$(CC)
 
 
