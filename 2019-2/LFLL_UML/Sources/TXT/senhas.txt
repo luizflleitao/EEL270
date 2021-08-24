@@ -1,0 +1,9 @@
+senha: hermetico
+
+DES: u8RYLgTC/vzRQ
+
+MD5: $1$XIexbc0K$zDtfSkAyP/ofgDIysTbks/
+
+SHA256: $5$H9rCmt36LAen9AWs$jJ8q3rZAQFJdiOiYou1DlW54.axWosA7bImcZYDay47
+
+SHA512: $6$x6USnPPyfe.9loFw$3u89VJb6/9mDssWJENGie/zuxhFfY528X/tbnkrYgWD5QqxRPsQxDcTY/pIOoC3VLb6NYYgvh84Uy/iy1qefs/

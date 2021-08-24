@@ -1,0 +1,1742 @@
+head	1.40;
+access;
+symbols;
+locks
+	luiz.leitao:1.40; strict;
+comment	@# @;
+
+
+1.40
+date	2019.10.24.05.01.38;	author luiz.leitao;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2019.10.16.20.28.02;	author luiz.leitao;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2019.10.08.16.45.44;	author luiz.leitao;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2019.10.03.20.59.27;	author luiz.leitao;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2019.10.03.05.36.27;	author luiz.leitao;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2019.10.03.04.34.08;	author luiz.leitao;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2019.10.03.00.07.17;	author luiz.leitao;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2019.09.20.04.26.52;	author luiz.leitao;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2019.09.20.04.15.22;	author luiz.leitao;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2019.09.20.03.57.03;	author luiz.leitao;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2019.09.20.03.44.03;	author luiz.leitao;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2019.09.20.03.07.19;	author luiz.leitao;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2019.09.20.02.52.30;	author luiz.leitao;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2019.09.17.17.40.00;	author luiz.leitao;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2019.09.17.17.13.05;	author luiz.leitao;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2019.09.12.13.06.31;	author luiz.leitao;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2019.09.12.12.51.06;	author luiz.leitao;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2019.09.10.17.50.42;	author luiz.leitao;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2019.09.10.17.38.05;	author luiz.leitao;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2019.09.10.17.22.23;	author luiz.leitao;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2019.09.04.12.17.13;	author luiz.leitao;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2019.09.04.12.07.20;	author luiz.leitao;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2019.09.04.11.41.24;	author luiz.leitao;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2019.09.04.10.49.17;	author luiz.leitao;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2019.08.30.04.57.08;	author luiz.leitao;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2019.08.30.04.47.32;	author luiz.leitao;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2019.08.30.04.31.51;	author luiz.leitao;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2019.08.30.03.54.20;	author luiz.leitao;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2019.08.20.17.59.05;	author luiz.leitao;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2019.08.20.17.51.57;	author luiz.leitao;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2019.08.20.17.43.12;	author luiz.leitao;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2019.08.20.17.27.59;	author luiz.leitao;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2019.08.16.20.46.44;	author luiz.leitao;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2019.08.16.20.31.34;	author luiz.leitao;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2019.08.16.20.17.13;	author luiz.leitao;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2019.08.16.19.55.40;	author luiz.leitao;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2019.08.16.05.45.48;	author luiz.leitao;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2019.08.16.05.29.33;	author luiz.leitao;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2019.08.16.05.10.36;	author luiz.leitao;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2019.08.15.04.46.53;	author luiz.leitao;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.40
+log
+@Inclusao do prototipo da funcao DecodificarBase64.
+Inclusao do prototipo da funcao EncontrarPosicaoPonteiroCaractere.
+Implementacao da funcao DecodificarBase64.
+Implementacao da funcao EncontrarPosicaoPonteiroCaractere.
+Implementacao do programa de testes da funcao DecodificarBase64.
+@
+text
+@#
+# Universidade Federal do Rio de Janeiro
+# Escola Politecnica
+# Departamento de Eletronica e de Computacao
+# EEL270 - Computacao II - Turma 2019/2
+# Prof. Marcelo Luiz Drumond Lanza
+#
+# Autor: Luiz Fernando Loureiro Leitao
+# Descricao: implementacao do arquivo de dependencias para o ambiente FreeBSD.
+#
+# $Author: luiz.leitao $
+# $Date: 2019/10/16 20:28:02 $
+# $Log: BSDmakefile,v $
+# Revision 1.39  2019/10/16 20:28:02  luiz.leitao
+# Implementacao do arquivo de cabecalho referente a aula 09.
+# Implementacao da funcao CodificarBase64.
+# Implementacao do programa de testes da funcao CodificarBase64.
+#
+# Revision 1.38  2019/10/08 16:45:44  luiz.leitao
+# Implementacao do arquivo de cabecalho referente a aula 08.
+# Implementacao das funcoes MostrarMonitor, LimparMonitor, DesenharRetangulo e PreencherPoligono.
+# Implementacao do programa de testes da funcao PreencherPoligono.
+#
+# Revision 1.37  2019/10/03 20:59:27  luiz.leitao
+# Implementacao do arquivo de cabecalho referente a aula 07.
+# Implementacao das funcoes MostrarMatriz1, MostrarMatriz2, MultiplicarMatrizes e MostrarMatrizResultado.
+# Implementacao do programa de testes da funcao MultiplicarMatrizes.
+#
+# Revision 1.36  2019/10/03 05:36:27  luiz.leitao
+# Inclusao do prototipo da funcao GerarPisPasep.
+# Implementacao da funcao GerarPisPasep.
+# Implementacao do programa de testes da funcao GerarPisPasep.
+#
+# Revision 1.35  2019/10/03 04:34:08  luiz.leitao
+# Implementacao do arquivo de cabecalho referente a aula 06.
+# Implementacao da funcao GerarDigitoVerificadorPisPasep.
+# Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep.
+#
+# Revision 1.34  2019/10/03 00:07:17  luiz.leitao
+# Alteracoes adicionais no arquivo <aula0601.h>.
+# Alteracoes adicionais no arquivo <aula0601.c>.
+# Alteracoes adicionais no arquivo <aula0602a.c>.
+# Alteracoes adicionais no arquivo <aula0602b.c>.
+# Alteracoes adicionais no arquivo <aula0603a.c>.
+# Alteracoes adicionais no arquivo <aula0603b.c>.
+# Alteracoes adicionais no arquivo <aula0604.h>.
+# Alteracoes adicionais no arquivo <aula0604.c>.
+# Alteracoes adicionais no arquivo <aula0605a.c>.
+# Alteracoes adicionais no arquivo <aula0605b.c>.
+# Alteracoes adicionais no arquivo <aula0606a.c>.
+# Alteracoes adicionais no arquivo <aula0606b.c>.
+# Inclusao do prototipo da funcao GerarPisPasep.
+# Implementacao da funcao GerarPisPasep.
+# Implementacao do programa de testes da funcao GerarPisPasep.
+#
+# Revision 1.33  2019/09/20 04:26:52  luiz.leitao
+# Implementacao do programa de testes da funcao ValidarPisPasep.
+#
+# Revision 1.32  2019/09/20 04:15:22  luiz.leitao
+# Inclusao do prototipo da funcao ValidarPisPasep.
+# Implementacao da funcao ValidarPisPasep.
+# Implementacao do programa de testes da funcao ValidarPisPasep.
+#
+# Revision 1.31  2019/09/20 03:57:03  luiz.leitao
+# Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep.
+#
+# Revision 1.30  2019/09/20 03:44:03  luiz.leitao
+# Implementacao do arquivo de cabecalho referente a aula 06.
+# Implementacao da funcao GerarDigitoVerificadorPisPasep.
+# Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep.
+#
+# Revision 1.29  2019/09/20 03:07:19  luiz.leitao
+# Implementacao do programa de testes da funcao ValidarPisPasep.
+#
+# Revision 1.28  2019/09/20 02:52:30  luiz.leitao
+# Inclusao do prototipo da funcao ValidarPisPasep.
+# Implementacao da funcao ValidarPisPasep.
+# Implementacao do programa de testes da funcao ValidarPisPasep.
+#
+# Revision 1.27  2019/09/17 17:40:00  luiz.leitao
+# Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep.
+#
+# Revision 1.26  2019/09/17 17:13:05  luiz.leitao
+# Implementacao do arquivo de cabecalho referente a aula 06.
+# Implementacao da funcao GerarDigitoVerificadorPisPasep.
+# Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep.
+#
+# Revision 1.25  2019/09/12 13:06:31  luiz.leitao
+# Implementacao do algoritmo da Serie Harmonica Alternada utilizando recursividade e a funcao pow.
+#
+# Revision 1.24  2019/09/12 12:51:06  luiz.leitao
+# Implementacao do algoritmo da Serie Harmonica Alternada utilizando o laco de repeticao while e a funcao CalcularExponencial.
+#
+# Revision 1.23  2019/09/10 17:50:42  luiz.leitao
+# Implementacao do algoritmo da Serie Harmonica Alternada utilizando o laco de repeticao for e a funcao CalcularExponencial.
+#
+# Revision 1.22  2019/09/10 17:38:05  luiz.leitao
+# Implementacao do algoritmo da Serie Harmonica Alternada utilizando o laco de repeticao do ... while e a funcao CalcularExponencial.
+#
+# Revision 1.21  2019/09/10 17:22:23  luiz.leitao
+# Implementacao do arquivo de cabecalho referente a aula 05.
+# Implementacao do algoritmo da Serie Harmonica Alternada utilizando recursividade e a funcao CalcularExponencial.
+# Implementacao do programa de testes.
+#
+# Revision 1.20  2019/09/04 12:17:13  luiz.leitao
+# Implementacao do algoritmo de potenciacao utilizando o laco de repeticao while.
+#
+# Revision 1.19  2019/09/04 12:07:20  luiz.leitao
+# Implementacao do algoritmo de potenciacao utilizando o laco de repeticao for.
+#
+# Revision 1.18  2019/09/04 11:41:24  luiz.leitao
+# Implementacao do algoritmo de potenciacao utilizando o laco de repeticao do ... while.
+#
+# Revision 1.17  2019/09/04 10:49:17  luiz.leitao
+# Implementacao do arquivo de cabecalho referente a aula 04.
+# Implementacao do algoritmo de potenciacao utilizando recursividade.
+# Implementacao do programa de testes.
+#
+# Revision 1.16  2019/08/30 04:57:08  luiz.leitao
+# Implementacao do algoritmo da Serie de Fibonacci utilizando o laco de repeticao while.
+#
+# Revision 1.15  2019/08/30 04:47:32  luiz.leitao
+# Implementacao do algoritmo da Serie de Fibonacci utilizando o laco de repeticao for.
+#
+# Revision 1.14  2019/08/30 04:31:51  luiz.leitao
+# Implementacao do algoritmo da Serie de Fibonacci utilizando o laco de repeticao do ... while.
+#
+# Revision 1.13  2019/08/30 03:54:20  luiz.leitao
+# Implementacao do arquivo de cabecalho referente a aula 03.
+# Implementacao do algoritmo da Serie de Fibonacci utilizando recursividade.
+# Implementacao do programa de testes.
+#
+# Revision 1.12  2019/08/20 17:59:05  luiz.leitao
+# Implementacao do algoritmo de MDC utilizando o laco de repeticao while.
+#
+# Revision 1.11  2019/08/20 17:51:57  luiz.leitao
+# Implementacao do algoritmo de MDC utilizando o laco de repeticao for.
+#
+# Revision 1.10  2019/08/20 17:43:12  luiz.leitao
+# Implementacao do algoritmo de MDC utilizando o laco de repeticao do ... while.
+#
+# Revision 1.9  2019/08/20 17:27:59  luiz.leitao
+# Implementacao do arquivo de cabecalho referente a aula 02.
+# Implementacao do algoritmo de MDC utilizando recursividade.
+# Implementacao do programa de testes.
+#
+# Revision 1.8  2019/08/16 20:46:44  luiz.leitao
+# Inclusao dos tipos basicos com os modificadores de sinal e com os modificadores de largura.
+#
+# Revision 1.7  2019/08/16 20:31:34  luiz.leitao
+# Inclusao dos tipos basicos com os modificadores de largura.
+#
+# Revision 1.6  2019/08/16 20:17:13  luiz.leitao
+# Inclusao dos tipos basicos com os modificadores de sinal.
+#
+# Revision 1.5  2019/08/16 19:55:40  luiz.leitao
+# Inclusao dos modificadores de sinal combinados com os modificadores de largura.
+#
+# Revision 1.4  2019/08/16 05:45:48  luiz.leitao
+# Inclusao dos modificadores de largura.
+#
+# Revision 1.3  2019/08/16 05:29:33  luiz.leitao
+# Inclusao dos modificadores de sinal.
+#
+# Revision 1.2  2019/08/16 05:10:36  luiz.leitao
+# Inclusao dos tipos basicos da linguagem.
+#
+# Revision 1.1  2019/08/15 04:46:53  luiz.leitao
+# Initial revision
+#
+
+
+
+
+
+
+
+
+
+
+# Macro referente ao nome do sistema operacional utilizado.
+
+OS = `uname -s`
+
+
+
+
+
+# Declaracoes condicionais referentes a compilacao e a link-edicao (gcc ou clang).
+
+.ifdef GCC
+CC = gcc
+LD = gcc
+.elif CLANG
+CC = clang
+LD = clang
+.else
+CC = gcc
+LD = gcc
+.endif
+
+
+
+
+
+# Macros referentes aos argumentos passados tanto na compilacao quanto na link-edicao.
+
+CFLAGS = -Wall -std=c99
+LFLAGS = -Wall -std=c99
+
+
+
+
+
+# Macros referente ao comando da criacao da biblioteca estatica.
+
+AR = ar
+AFLAGS = -r
+
+
+
+
+
+# Macros referentes aos codigos-objeto da aula pratica 01.
+
+AULA0101OBJS = aula0101.o
+AULA0102OBJS = aula0102.o
+AULA0103OBJS = aula0103.o
+AULA0104OBJS = aula0104.o
+AULA0105OBJS = aula0105.o
+AULA0106OBJS = aula0106.o
+AULA0107OBJS = aula0107.o
+AULA0108OBJS = aula0108.o
+
+
+
+
+
+# Macros referentes aos codigos-objeto da aula pratica 02.
+
+AULA0202AOBJS = aula0201a.o aula0202.o
+AULA0202BOBJS = aula0201b.o aula0202.o
+AULA0202COBJS = aula0201c.o aula0202.o
+AULA0202DOBJS = aula0201d.o aula0202.o
+
+
+
+
+
+# Macros referentes aos codigos-objeto da aula pratica 03.
+
+AULA0302AOBJS = aula0301a.o aula0302.o
+AULA0302BOBJS = aula0301b.o aula0302.o
+AULA0302COBJS = aula0301c.o aula0302.o
+AULA0302DOBJS = aula0301d.o aula0302.o
+
+
+
+
+
+# Macros referentes aos codigos-objeto da aula pratica 04.
+
+AULA0402AOBJS = aula0401a.o aula0402.o
+AULA0402BOBJS = aula0401b.o aula0402.o
+AULA0402COBJS = aula0401c.o aula0402.o
+AULA0402DOBJS = aula0401d.o aula0402.o
+
+
+
+
+
+# Macros referentes aos codigos-objeto da aula pratica 05.
+
+AULA0502AOBJS = aula0501a.o aula0502.o
+AULA0502BOBJS = aula0501b.o aula0502.o
+AULA0502COBJS = aula0501c.o aula0502.o
+AULA0502DOBJS = aula0501d.o aula0502.o
+AULA0502EOBJS = aula0501e.o aula0502.o
+
+
+
+
+
+# Macros referentes aos codigos-objeto da aula pratica 06.
+
+AULA0602AOBJS = aula0601.o aula0602a.o
+AULA0602BOBJS = aula0601.o aula0602b.o
+AULA0603AOBJS = aula0601.o aula0603a.o
+AULA0603BOBJS = aula0601.o aula0603b.o
+AULA0605AOBJS = aula0604.o aula0605a.o
+AULA0605BOBJS = aula0604.o aula0605b.o
+AULA0606AOBJS = aula0604.o aula0606a.o
+AULA0606BOBJS = aula0604.o aula0606b.o
+AULA0607OBJS = aula0601.o aula0607.o
+AULA0609OBJS = aula0608.o aula0609.o
+AULA0610OBJS = aula0608.o aula0610.o
+
+
+
+
+
+# Macros referentes aos codigos-objeto da aula pratica 07.
+
+AULA0702OBJS = aula0701.o aula0702.o
+
+
+
+
+
+# Macros referentes aos codigos-objeto da aula pratica 08.
+
+AULA0802OBJS = aula0801.o aula0802.o
+
+
+
+
+
+# Macros referentes aos codigos-objeto da aula pratica 09.
+
+AULA0902OBJS = aula0901.o aula0902.o
+AULA0903OBJS = aula0901.o aula0903.o
+
+
+
+
+
+# Macro referente aos executaveis da aula pratica 01.
+
+AULA01 = aula0101\
+	 aula0102\
+	 aula0103\
+	 aula0104\
+	 aula0105\
+	 aula0106\
+	 aula0107\
+	 aula0108
+
+
+
+
+
+# Macro referente aos executaveis da aula pratica 02.
+
+AULA02 = aula0202a\
+	 aula0202b\
+	 aula0202c\
+	 aula0202d
+
+
+
+
+
+# Macro referente aos executaveis da aula pratica 03.
+
+AULA03 = aula0302a\
+	 aula0302b\
+	 aula0302c\
+	 aula0302d
+
+
+
+
+
+# Macro referente aos executaveis da aula pratica 04.
+
+AULA04 = aula0402a\
+	 aula0402b\
+	 aula0402c\
+	 aula0402d
+
+
+
+
+
+# Macro referente aos executaveis da aula pratica 05.
+
+AULA05 = aula0502a\
+	 aula0502b\
+	 aula0502c\
+	 aula0502d\
+	 aula0502e
+
+
+
+
+
+# Macro referente aos executaveis da aula pratica 06.
+
+AULA06 = aula0602a\
+	 aula0602b\
+	 aula0603a\
+	 aula0603b\
+	 aula0605a\
+	 aula0605b\
+	 aula0606a\
+	 aula0606b\
+	 aula0607\
+	 aula0609\
+	 aula0610
+
+
+
+
+
+# Macro referente aos executaveis da aula pratica 07.
+
+AULA07 = aula0702
+
+
+
+
+
+# Macro referente aos executaveis da aula pratica 08.
+
+AULA08 = aula0802
+
+
+
+
+
+# Macro referente aos executaveis da aula pratica 09.
+
+AULA09 = aula0902\
+	 aula0903
+
+
+
+
+
+# Macros referentes a criacao da biblioteca estatica.
+
+LIBMATEMATICAOBJS = aula0401a.o
+LIBMATEMATICA = libmatematica.a
+
+
+
+
+
+# Macro referente aos executaveis das aulas praticas de 01 a 10.
+
+EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04) $(AULA05)\
+	$(AULA06) $(AULA07) $(AULA08) $(AULA09)
+
+
+
+
+
+# Macro referente a biblioteca estatica.
+
+LIBS = $(LIBMATEMATICA)
+
+
+
+
+
+# Macro referente aos executaveis e a biblioteca das aulas praticas de 01 a 10.
+
+ALL = $(EXECS) $(LIBS)
+
+
+
+
+
+
+
+
+
+
+# Rotulo padrao da ferramenta make (regra implicita).
+
+.c.o:
+	$(CC) $(CFLAGS) -c $<
+
+
+
+
+
+# Rotulo referente a dependencia ALL (valor da macro ALL).
+
+all: $(ALL)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 01.
+
+aula01: $(AULA01)
+
+aula0101: $(AULA0101OBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0101OBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0102: $(AULA0102OBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0102OBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0103: $(AULA0103OBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0103OBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0104: $(AULA0104OBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0104OBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0105: $(AULA0105OBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0105OBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0106: $(AULA0106OBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0106OBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0107: $(AULA0107OBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0107OBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0108: $(AULA0108OBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0108OBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 02.
+
+aula02: $(AULA02)
+
+aula0202a: $(AULA0202AOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0202AOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0202b: $(AULA0202BOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0202BOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0202c: $(AULA0202COBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0202COBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0202d: $(AULA0202DOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0202DOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 03.
+
+aula03: $(AULA03)
+
+aula0302a: $(AULA0302AOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0302AOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0302b: $(AULA0302BOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0302BOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0302c: $(AULA0302COBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0302COBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0302d: $(AULA0302DOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0302DOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 04.
+
+aula04: $(AULA04)
+
+aula0402a: $(AULA0402AOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0402AOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0402b: $(AULA0402BOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0402BOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0402c: $(AULA0402COBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0402COBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0402d: $(AULA0402DOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0402DOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 05.
+
+aula05: $(AULA05)
+
+aula0502a: $(AULA0502AOBJS) $(LIBMATEMATICA)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0502AOBJS) -L. -lmatematica
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0502b: $(AULA0502BOBJS) $(LIBMATEMATICA)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0502BOBJS) -L. -lmatematica
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0502c: $(AULA0502COBJS) $(LIBMATEMATICA)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0502COBJS) -L. -lmatematica
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0502d: $(AULA0502DOBJS) $(LIBMATEMATICA)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0502DOBJS) -L. -lmatematica
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0502e: $(AULA0502EOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0502EOBJS) -lm
+	cp $@@ $@@-$(OS)-$(CC)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 06.
+
+aula06: $(AULA06)
+
+aula0602a: $(AULA0602AOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0602AOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0602b: $(AULA0602BOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0602BOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0603a: $(AULA0603AOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0603AOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0603b: $(AULA0603BOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0603BOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0605a: $(AULA0605AOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0605AOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0605b: $(AULA0605BOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0605BOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0606a: $(AULA0606AOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0606AOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0606b: $(AULA0606BOBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0606BOBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0607: $(AULA0607OBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0607OBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0609: $(AULA0609OBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0609OBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0610: $(AULA0610OBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0610OBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 07.
+
+aula07: $(AULA07)
+
+aula0702: $(AULA0702OBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0702OBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 08.
+
+aula08: $(AULA08)
+
+aula0802: $(AULA0802OBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0802OBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da aula pratica 09.
+
+aula09: $(AULA09)
+
+aula0902: $(AULA0902OBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0902OBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+aula0903: $(AULA0903OBJS)
+	$(LD) $(LFLAGS) -o $@@ $(AULA0903OBJS)
+	cp $@@ $@@-$(OS)-$(CC)
+
+
+
+
+
+# Rotulos referentes as dependencias (valores das macros) da biblioteca estatica.
+
+libmatematica.a: $(LIBMATEMATICAOBJS)
+	$(AR) $(AFLAGS) $@@ $(LIBMATEMATICAOBJS)
+
+
+
+
+
+# Rotulo referente a exclusao de todos os codigos-objeto e executaveis gerados, exceto os executaveis
+# que indicam a combinacao entre sistema operacional e compilador/link-editor.
+
+clean:
+	rm -f *.o $(ALL)
+
+
+
+
+
+# Rotulo referente a exclusao de todos os codigos-objeto e executaveis gerados.
+
+clean-all:
+	rm -f *.o $(ALL) *-FreeBSD-* *-Linux-*
+
+
+
+
+
+# Rotulo referente a exclusao de todos os codigos-objeto e executaveis gerados no FreeBSD.
+
+clean-freebsd:
+	rm -f *.o *-FreeBSD-*
+
+
+
+
+
+# Rotulo referente a exclusao de todos os codigos-objeto e executaveis gerados no Linux.
+
+clean-linux:
+	rm -f *.o *-Linux-*
+
+
+
+
+
+
+
+
+
+
+# $RCSfile: BSDmakefile,v $
+@
+
+
+1.39
+log
+@Implementacao do arquivo de cabecalho referente a aula 09.
+Implementacao da funcao CodificarBase64.
+Implementacao do programa de testes da funcao CodificarBase64.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/10/08 16:45:44 $
+d14 5
+d321 1
+d423 2
+a424 1
+AULA09 = aula0902
+d708 4
+@
+
+
+1.38
+log
+@Implementacao do arquivo de cabecalho referente a aula 08.
+Implementacao das funcoes MostrarMonitor, LimparMonitor, DesenharRetangulo e PreencherPoligono.
+Implementacao do programa de testes da funcao PreencherPoligono.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/10/03 20:59:27 $
+d14 5
+d203 2
+a204 2
+CFLAGS = -Wall -std=c11
+LFLAGS = -Wall -std=c11
+d313 8
+d415 8
+d435 1
+a435 1
+	$(AULA06) $(AULA07) $(AULA08)
+d689 12
+@
+
+
+1.37
+log
+@Implementacao do arquivo de cabecalho referente a aula 07.
+Implementacao das funcoes MostrarMatriz1, MostrarMatriz2, MultiplicarMatrizes e MostrarMatrizResultado.
+Implementacao do programa de testes da funcao MultiplicarMatrizes.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/10/03 05:36:27 $
+d14 5
+d198 2
+a199 2
+CFLAGS = -Wall -std=c99
+LFLAGS = -Wall -std=c99
+d300 8
+d394 8
+d414 1
+a414 1
+	$(AULA06) $(AULA07)
+d662 12
+@
+
+
+1.36
+log
+@Inclusao do prototipo da funcao GerarPisPasep.
+Implementacao da funcao GerarPisPasep.
+Implementacao do programa de testes da funcao GerarPisPasep.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/10/03 04:34:08 $
+d14 5
+d193 2
+a194 2
+CFLAGS = -Wall -std=c11
+LFLAGS = -Wall -std=c11
+d287 8
+d373 8
+d393 1
+a393 1
+	$(AULA06)
+d623 12
+@
+
+
+1.35
+log
+@Implementacao do arquivo de cabecalho referente a aula 06.
+Implementacao da funcao GerarDigitoVerificadorPisPasep.
+Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/10/03 00:07:17 $
+d14 5
+d276 1
+d353 2
+a354 1
+	 aula0609
+d598 4
+@
+
+
+1.34
+log
+@Alteracoes adicionais no arquivo <aula0601.h>.
+Alteracoes adicionais no arquivo <aula0601.c>.
+Alteracoes adicionais no arquivo <aula0602a.c>.
+Alteracoes adicionais no arquivo <aula0602b.c>.
+Alteracoes adicionais no arquivo <aula0603a.c>.
+Alteracoes adicionais no arquivo <aula0603b.c>.
+Alteracoes adicionais no arquivo <aula0604.h>.
+Alteracoes adicionais no arquivo <aula0604.c>.
+Alteracoes adicionais no arquivo <aula0605a.c>.
+Alteracoes adicionais no arquivo <aula0605b.c>.
+Alteracoes adicionais no arquivo <aula0606a.c>.
+Alteracoes adicionais no arquivo <aula0606b.c>.
+Inclusao do prototipo da funcao GerarPisPasep.
+Implementacao da funcao GerarPisPasep.
+Implementacao do programa de testes da funcao GerarPisPasep.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/09/20 04:26:52 $
+d14 17
+d270 1
+d346 2
+a347 1
+	 aula0607
+d587 4
+@
+
+
+1.33
+log
+@Implementacao do programa de testes da funcao ValidarPisPasep.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/09/20 04:15:22 $
+d14 3
+d252 1
+d327 2
+a328 1
+	 aula0606b
+d564 4
+@
+
+
+1.32
+log
+@Inclusao do prototipo da funcao ValidarPisPasep.
+Implementacao da funcao ValidarPisPasep.
+Implementacao do programa de testes da funcao ValidarPisPasep.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/09/20 03:57:03 $
+d14 5
+d248 1
+d322 2
+a323 1
+	 aula0606a
+d555 4
+@
+
+
+1.31
+log
+@Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/09/20 03:44:03 $
+d14 3
+d242 1
+d315 2
+a316 1
+	 aula0605b
+d544 4
+@
+
+
+1.30
+log
+@Implementacao do arquivo de cabecalho referente a aula 06.
+Implementacao da funcao GerarDigitoVerificadorPisPasep.
+Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/09/20 03:07:19 $
+d14 5
+d238 1
+d310 2
+a311 1
+	 aula0605a
+d535 4
+@
+
+
+1.29
+log
+@Implementacao do programa de testes da funcao ValidarPisPasep.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/09/20 02:52:30 $
+d14 3
+d232 1
+d303 2
+a304 1
+	 aula0603b
+d524 4
+@
+
+
+1.28
+log
+@Inclusao do prototipo da funcao ValidarPisPasep.
+Implementacao da funcao ValidarPisPasep.
+Implementacao do programa de testes da funcao ValidarPisPasep.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/09/17 17:40:00 $
+d14 5
+d228 1
+d298 2
+a299 1
+	 aula0603a
+d515 4
+@
+
+
+1.27
+log
+@Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/09/17 17:13:05 $
+d14 3
+d222 1
+d291 2
+a292 1
+	 aula0602b
+d504 4
+@
+
+
+1.26
+log
+@Implementacao do arquivo de cabecalho referente a aula 06.
+Implementacao da funcao GerarDigitoVerificadorPisPasep.
+Implementacao do programa de testes da funcao GerarDigitoVerificadorPisPasep.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/09/12 13:06:31 $
+d14 5
+d218 1
+d286 2
+a287 1
+AULA06 = aula0602a
+d497 4
+@
+
+
+1.25
+log
+@Implementacao do algoritmo da Serie Harmonica Alternada utilizando recursividade e a funcao pow.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/09/12 12:51:06 $
+d14 3
+d210 8
+d278 8
+d297 2
+a298 1
+EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04) $(AULA05)
+d475 13
+a487 1
+	$(LD) $(LFLAGS) -o $@@ $(AULA0502EOBJS) -L. -lm
+@
+
+
+1.24
+log
+@Implementacao do algoritmo da Serie Harmonica Alternada utilizando o laco de repeticao while e a funcao CalcularExponencial.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/09/10 17:50:42 $
+d14 3
+d201 1
+d260 2
+a261 1
+	 aula0502d
+d452 4
+@
+
+
+1.23
+log
+@Implementacao do algoritmo da Serie Harmonica Alternada utilizando o laco de repeticao for e a funcao CalcularExponencial.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/09/10 17:38:05 $
+d14 3
+d197 1
+d255 2
+a256 1
+	 aula0502c
+d443 4
+@
+
+
+1.22
+log
+@Implementacao do algoritmo da Serie Harmonica Alternada utilizando o laco de repeticao do ... while e a funcao CalcularExponencial.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/09/10 17:22:23 $
+d14 3
+d193 1
+d250 2
+a251 1
+	 aula0502b
+d436 4
+@
+
+
+1.21
+log
+@Implementacao do arquivo de cabecalho referente a aula 05.
+Implementacao do algoritmo da Serie Harmonica Alternada utilizando recursividade e a funcao CalcularExponencial.
+Implementacao do programa de testes.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/09/04 12:17:13 $
+d14 5
+d189 1
+d245 2
+a246 1
+AULA05 = aula0502a
+d427 4
+@
+
+
+1.20
+log
+@Implementacao do algoritmo de potenciacao utilizando o laco de repeticao while.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/09/04 12:07:20 $
+d14 3
+d117 11
+a127 2
+CFLAGS = -Wall -std=c99
+LFLAGS = -Wall -std=c99
+d181 8
+d237 17
+d256 5
+a260 1
+EXECS = $(AULA01) $(AULA02) $(AULA03) $(AULA04)
+d262 1
+d264 1
+a267 1
+# Macro referente aos executaveis e as bibliotecas das aulas praticas de 01 a 10.
+d269 4
+a272 1
+ALL = $(EXECS)
+d412 21
+@
+
+
+1.19
+log
+@Implementacao do algoritmo de potenciacao utilizando o laco de repeticao for.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/09/04 11:41:24 $
+d14 3
+d163 1
+d210 2
+a211 1
+	 aula0402c
+d357 4
+@
+
+
+1.18
+log
+@Implementacao do algoritmo de potenciacao utilizando o laco de repeticao do ... while.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/09/04 10:49:17 $
+d14 3
+d159 1
+d205 2
+a206 1
+	 aula0402b
+d348 4
+@
+
+
+1.17
+log
+@Implementacao do arquivo de cabecalho referente a aula 04.
+Implementacao do algoritmo de potenciacao utilizando recursividade.
+Implementacao do programa de testes.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/08/30 04:57:08 $
+d14 5
+d155 1
+d200 2
+a201 1
+AULA04 = aula0402a
+d339 4
+@
+
+
+1.16
+log
+@Implementacao do algoritmo da Serie de Fibonacci utilizando o laco de repeticao while.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/08/30 04:47:32 $
+d14 3
+d147 8
+d192 8
+d202 1
+a202 1
+EXECS = $(AULA01) $(AULA02) $(AULA03)
+d320 12
+@
+
+
+1.15
+log
+@Implementacao do algoritmo da Serie de Fibonacci utilizando o laco de repeticao for.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/08/30 04:31:51 $
+d14 3
+d138 1
+d174 2
+a175 1
+	 aula0302c
+d297 4
+@
+
+
+1.14
+log
+@Implementacao do algoritmo da Serie de Fibonacci utilizando o laco de repeticao do ... while.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/08/30 03:54:20 $
+d14 3
+d134 1
+d169 2
+a170 1
+	 aula0302b
+d288 4
+@
+
+
+1.13
+log
+@Implementacao do arquivo de cabecalho referente a aula 03.
+Implementacao do algoritmo da Serie de Fibonacci utilizando recursividade.
+Implementacao do programa de testes.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/08/20 17:59:05 $
+d14 5
+d130 1
+d164 2
+a165 1
+AULA03 = aula0302a
+d279 4
+@
+
+
+1.12
+log
+@Implementacao do algoritmo de MDC utilizando o laco de repeticao while.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/08/20 17:51:57 $
+d14 3
+d122 8
+d145 12
+a156 1
+# Macro referente aos executaveis das aulas praticas de 01 a 10.
+d158 1
+a158 1
+EXECS = $(AULA01) $(AULA02)
+d164 1
+a164 1
+# Macro referente aos executaveis da aula pratica 02.
+d166 1
+a166 4
+AULA02 = aula0202a\
+	 aula0202b\
+	 aula0202c\
+	 aula0202d
+d260 12
+@
+
+
+1.11
+log
+@Implementacao do algoritmo de MDC utilizando o laco de repeticao for.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/08/20 17:43:12 $
+d14 3
+d113 1
+d146 2
+a147 1
+	 aula0202c
+d237 4
+@
+
+
+1.10
+log
+@Implementacao do algoritmo de MDC utilizando o laco de repeticao do ... while.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/08/20 17:27:59 $
+d14 3
+d109 1
+d141 2
+a142 1
+	 aula0202b
+d228 4
+@
+
+
+1.9
+log
+@Implementacao do arquivo de cabecalho referente a aula 02.
+Implementacao do algoritmo de MDC utilizando recursividade.
+Implementacao do programa de testes.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/08/16 20:46:44 $
+d14 5
+d105 1
+d136 2
+a137 1
+AULA02 = aula0202a
+d219 4
+@
+
+
+1.8
+log
+@Inclusao dos tipos basicos com os modificadores de sinal e com os modificadores de largura.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/08/16 20:31:34 $
+d14 3
+d97 8
+d122 9
+a130 1
+EXECS = $(AULA01)
+d200 12
+@
+
+
+1.7
+log
+@Inclusao dos tipos basicos com os modificadores de largura.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/08/16 20:17:13 $
+d14 3
+d88 1
+d102 2
+a103 1
+	 aula0107
+d177 4
+@
+
+
+1.6
+log
+@Inclusao dos tipos basicos com os modificadores de sinal.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/08/16 19:55:40 $
+d14 3
+d84 1
+d97 2
+a98 1
+	 aula0106
+d168 4
+@
+
+
+1.5
+log
+@Inclusao dos modificadores de sinal combinados com os modificadores de largura.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/08/16 05:45:48 $
+d14 3
+d80 1
+d92 2
+a93 1
+	 aula0105
+d159 4
+@
+
+
+1.4
+log
+@Inclusao dos modificadores de largura.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/08/16 05:29:33 $
+d14 3
+d76 1
+d87 2
+a88 1
+	 aula0104
+d150 4
+@
+
+
+1.3
+log
+@Inclusao dos modificadores de sinal.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/08/16 05:10:36 $
+d14 3
+d72 1
+d82 2
+a83 1
+	 aula0103
+d141 4
+@
+
+
+1.2
+log
+@Inclusao dos tipos basicos da linguagem.
+@
+text
+@d12 1
+a12 1
+# $Date: 2019/08/15 04:46:53 $
+d14 3
+d68 1
+d77 2
+a78 1
+	 aula0102
+d132 4
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d11 6
+a16 3
+# $Author$
+# $Date$
+# $Log$
+d64 1
+d72 2
+a73 1
+AULA01 = aula0101
+d125 4
+d175 1
+a175 1
+# $RCSfile$
+@

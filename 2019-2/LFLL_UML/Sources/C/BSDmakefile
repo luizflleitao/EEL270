@@ -1,0 +1,407 @@
+#
+# Universidade Federal do Rio de Janeiro
+# Escola Politecnica
+# Departamento de Eletronica e de Computacao
+# Prof. Marcelo Luiz Drumond Lanza
+# EEL270 - Computacao II - Turma 2019/2
+#
+# $Author: luiz.leitao $
+# $Date: 2019/12/07 20:30:28 $
+# $Log: BSDmakefile,v $
+# Revision 1.1  2019/12/07 20:30:28  luiz.leitao
+# Initial revision
+#
+
+
+
+
+
+
+
+
+
+
+# Macro related to the operating system.
+
+LFLL_UML_OS = `uname -s`
+
+
+
+
+
+# Macros related to the compiler.
+
+CC = gcc
+LD = gcc
+
+
+
+
+
+# Macros related to the compiler.
+
+.ifdef GCC
+CC = gcc
+LD = gcc
+.elif CLANG
+CC = clang
+LD = clang
+.else
+CC = gcc
+LD = gcc
+.endif
+
+
+
+
+
+# Macros related to the flags.
+
+CFLAGS = -Wall -std=c99
+LFLAGS = -Wall -std=c99
+
+
+
+
+
+# Macros related to the libraries.
+
+LFLL_UML_NCURSES = -lncurses
+LFLL_UML_ML_CGI = -lmlcgi
+LFLL_UML_CRYPT = -lcrypt
+
+
+
+
+
+# Macro related to the libraries.
+
+LFLL_UML_STANDARD_LIBRARIES = $(LFLL_UML_NCURSES) $(LFLL_UML_CRYPT)
+
+
+
+
+
+# Macros related to the directories path.
+
+LFLL_UML_BINARIES_DIRECTORY = /users/luiz.leitao/private/EEL270/2019-2/LFLL_UML/Binaries/
+LFLL_UML_DATA_DIRECTORY = /users/luiz.leitao/private/EEL270/2019-2/LFLL_UML/Data/
+LFLL_UML_COOKIES_DIRECTORY = /users/luiz.leitao/private/EEL270/2019-2/LFLL_UML/Data/Cookies/
+LFLL_UML_PUBLIC_LFLL_UML_DIRECTORY = /users/luiz.leitao/public/html/EEL270/2019-2/LFLL_UML/
+LFLL_UML_CGIS_DIRECTORY = /users/luiz.leitao/public/html/EEL270/2019-2/LFLL_UML/CGIs/
+LFLL_UML_PRIVATE_HTML_DIRECTORY = /users/luiz.leitao/private/EEL270/2019-2/LFLL_UML/Sources/HTML/
+LFLL_UML_PUBLIC_HTML_DIRECTORY = /users/luiz.leitao/public/html/
+LFLL_UML_FREEBSD_LIBRARY_DIRECTORY = /Libraries/$(LFLL_UML_OS)/
+
+
+
+
+
+# Macros related to the object codes.
+
+LFLL_UML_TEST_GET_LANGUAGE_INDEX_OBJS = lfllUmlFunctions.o lfllUmlTestGetLanguageIndex.o
+LFLL_UML_TEST_GET_CLI_ERROR_MESSAGE_OBJS = lfllUmlErrors.o lfllUmlTestGetCliErrorMessage.o
+LFLL_UML_TEST_GET_NCURSES_ERROR_MESSAGE_OBJS = lfllUmlErrors.o lfllUmlTestGetNcursesErrorMessage.o
+LFLL_UML_TEST_GET_WEB_ERROR_MESSAGE_OBJS = lfllUmlErrors.o lfllUmlTestGetWebErrorMessage.o
+LFLL_UML_TEST_GET_CLI_USER_INTERFACE_MESSAGE_OBJS = lfllUmlUserInterface.o lfllUmlTestGetCliUserInterfaceMessage.o
+LFLL_UML_TEST_GET_NCURSES_USER_INTERFACE_MESSAGE_OBJS = lfllUmlUserInterface.o lfllUmlTestGetNcursesUserInterfaceMessage.o
+LFLL_UML_TEST_GET_WEB_USER_INTERFACE_MESSAGE_OBJS = lfllUmlUserInterface.o lfllUmlTestGetWebUserInterfaceMessage.o
+LFLL_UML_TEST_GET_ABSOLUTE_FILE_NAME_OBJS = lfllUmlFunctions.o lfllUmlTestGetAbsoluteFileName.o
+LFLL_UML_TEST_CHECK_STRING_FIELD_OBJS = lfllUmlFunctions.o lfllUmlTestCheckStringField.o
+LFLL_UML_TEST_CHECK_NICKNAME_OBJS = lfllUmlFunctions.o lfllUmlTestCheckNickname.o
+LFLL_UML_TEST_CHECK_EMAIL_OBJS = lfllUmlFunctions.o lfllUmlTestCheckEmail.o
+LFLL_UML_TEST_CREATE_RANDOM_STRING_OBJS = lfllUmlFunctions.o lfllUmlTestCreateRandomString.o
+LFLL_UML_TEST_CREATE_NICKNAME_OBJS = lfllUmlFunctions.o lfllUmlTestCreateNickname.o
+LFLL_UML_TEST_GET_CRYPT_ALGORITHM_OBJS = lfllUmlFunctions.o lfllUmlTestGetCryptAlgorithm.o
+LFLL_UML_TEST_ENCODE_PASSWORD_WITH_SPECIFIC_ALGORITHM_OBJS = lfllUmlFunctions.o lfllUmlTestEncodePasswordWithSpecificAlgorithm.o
+LFLL_UML_TEST_ENCODE_PASSWORD_WITH_SPECIFIC_SALT_OBJS = lfllUmlFunctions.o lfllUmlTestEncodePasswordWithSpecificSalt.o
+LFLL_UML_TEST_CHECK_PASSWORD_OBJS = lfllUmlFunctions.o lfllUmlTestCheckPassword.o
+
+
+
+
+
+# Macros related to the executable files.
+
+LFLL_UML_TEST_GET_LANGUAGE_INDEX = lfllUmlTestGetLanguageIndex
+LFLL_UML_TEST_GET_CLI_ERROR_MESSAGE = lfllUmlTestGetCliErrorMessage
+LFLL_UML_TEST_GET_NCURSES_ERROR_MESSAGE = lfllUmlTestGetNcursesErrorMessage
+LFLL_UML_TEST_GET_WEB_ERROR_MESSAGE_CGI = lfllUmlTestGetWebErrorMessage.cgi
+LFLL_UML_TEST_GET_CLI_USER_INTERFACE_MESSAGE = lfllUmlTestGetCliUserInterfaceMessage
+LFLL_UML_TEST_GET_NCURSES_USER_INTERFACE_MESSAGE = lfllUmlTestGetNcursesUserInterfaceMessage
+LFLL_UML_TEST_GET_WEB_USER_INTERFACE_MESSAGE_CGI = lfllUmlTestGetWebUserInterfaceMessage.cgi
+LFLL_UML_TEST_GET_ABSOLUTE_FILE_NAME = lfllUmlTestGetAbsoluteFileName
+LFLL_UML_TEST_CHECK_STRING_FIELD = lfllUmlTestCheckStringField
+LFLL_UML_TEST_CHECK_NICKNAME = lfllUmlTestCheckNickname
+LFLL_UML_TEST_CHECK_EMAIL = lfllUmlTestCheckEmail
+LFLL_UML_TEST_CREATE_RANDOM_STRING = lfllUmlTestCreateRandomString
+LFLL_UML_TEST_CREATE_NICKNAME = lfllUmlTestCreateNickname
+LFLL_UML_TEST_GET_CRYPT_ALGORITHM = lfllUmlTestGetCryptAlgorithm
+LFLL_UML_TEST_ENCODE_PASSWORD_WITH_SPECIFIC_ALGORITHM = lfllUmlTestEncodePasswordWithSpecificAlgorithm
+LFLL_UML_TEST_ENCODE_PASSWORD_WITH_SPECIFIC_SALT = lfllUmlTestEncodePasswordWithSpecificSalt
+LFLL_UML_TEST_CHECK_PASSWORD = lfllUmlTestCheckPassword
+
+
+
+
+
+# Macros related to the binary files.
+
+LFLL_UML_BINARY_FILES = $(LFLL_UML_TEST_GET_LANGUAGE_INDEX)\
+			$(LFLL_UML_TEST_GET_CLI_ERROR_MESSAGE)\
+			$(LFLL_UML_TEST_GET_NCURSES_ERROR_MESSAGE)\
+			$(LFLL_UML_TEST_GET_CLI_USER_INTERFACE_MESSAGE)\
+			$(LFLL_UML_TEST_GET_NCURSES_USER_INTERFACE_MESSAGE)\
+			$(LFLL_UML_TEST_GET_ABSOLUTE_FILE_NAME)\
+			$(LFLL_UML_TEST_CHECK_STRING_FIELD)\
+			$(LFLL_UML_TEST_CHECK_NICKNAME)\
+			$(LFLL_UML_TEST_CHECK_EMAIL)\
+			$(LFLL_UML_TEST_CREATE_RANDOM_STRING)\
+			$(LFLL_UML_TEST_CREATE_NICKNAME)\
+			$(LFLL_UML_TEST_GET_CRYPT_ALGORITHM)\
+			$(LFLL_UML_TEST_ENCODE_PASSWORD_WITH_SPECIFIC_ALGORITHM)\
+			$(LFLL_UML_TEST_ENCODE_PASSWORD_WITH_SPECIFIC_SALT)\
+			$(LFLL_UML_TEST_CHECK_PASSWORD)
+
+
+
+
+
+# Macros related to the cgi files.
+
+LFLL_UML_CGI_FILES = $(LFLL_UML_TEST_GET_WEB_ERROR_MESSAGE_CGI)\
+		     $(LFLL_UML_TEST_GET_WEB_USER_INTERFACE_MESSAGE_CGI)
+
+
+
+
+
+# Macro related to the executable files.
+
+ALL = $(LFLL_UML_BINARY_FILES) $(LFLL_UML_CGI_FILES)
+
+
+
+
+
+
+
+
+
+
+# Implicit rule.
+
+.c.o:
+	$(CC) $(CFLAGS) -c $<
+
+
+
+
+
+# Target related to the ALL macro.
+
+all: $(ALL)
+
+
+
+
+
+# Target related to the LFLL_UML_TEST_GET_LANGUAGE_INDEX macro.
+
+lfllUmlTestGetLanguageIndex: $(LFLL_UML_TEST_GET_LANGUAGE_INDEX_OBJS)
+	$(LD) $(LFLAGS) -o $@ $(LFLL_UML_TEST_GET_LANGUAGE_INDEX_OBJS) $(LFLL_UML_STANDARD_LIBRARIES)
+
+
+
+
+
+# Target related to the LFLL_UML_TEST_GET_CLI_ERROR_MESSAGE macro.
+
+lfllUmlTestGetCliErrorMessage: $(LFLL_UML_TEST_GET_CLI_ERROR_MESSAGE_OBJS)
+	$(LD) $(LFLAGS) -o $@ $(LFLL_UML_TEST_GET_CLI_ERROR_MESSAGE_OBJS) $(LFLL_UML_STANDARD_LIBRARIES)
+
+
+
+
+
+# Target related to the LFLL_UML_TEST_GET_NCURSES_ERROR_MESSAGE macro.
+
+lfllUmlTestGetNcursesErrorMessage: $(LFLL_UML_TEST_GET_NCURSES_ERROR_MESSAGE_OBJS)
+	$(LD) $(LFLAGS) -o $@ $(LFLL_UML_TEST_GET_NCURSES_ERROR_MESSAGE_OBJS) $(LFLL_UML_STANDARD_LIBRARIES)
+
+
+
+
+
+# Target related to the LFLL_UML_TEST_GET_WEB_ERROR_MESSAGE_CGI macro.
+
+lfllUmlTestGetWebErrorMessage.cgi: $(LFLL_UML_TEST_GET_WEB_ERROR_MESSAGE_OBJS)
+	$(LD) $(LFLAGS) -o $@ $(LFLL_UML_TEST_GET_WEB_ERROR_MESSAGE_OBJS) -L.$(LFLL_UML_FREEBSD_LIBRARY_DIRECTORY) $(LFLL_UML_STANDARD_LIBRARIES) $(LFLL_UML_ML_CGI)
+
+
+
+
+
+# Target related to the LFLL_UML_TEST_GET_CLI_USER_INTERFACE_MESSAGE macro.
+
+lfllUmlTestGetCliUserInterfaceMessage: $(LFLL_UML_TEST_GET_CLI_USER_INTERFACE_MESSAGE_OBJS)
+	$(LD) $(LFLAGS) -o $@ $(LFLL_UML_TEST_GET_CLI_USER_INTERFACE_MESSAGE_OBJS) $(LFLL_UML_STANDARD_LIBRARIES)
+
+
+
+
+
+# Target related to the LFLL_UML_TEST_GET_NCURSES_USER_INTERFACE_MESSAGE macro.
+
+lfllUmlTestGetNcursesUserInterfaceMessage: $(LFLL_UML_TEST_GET_NCURSES_USER_INTERFACE_MESSAGE_OBJS)
+	$(LD) $(LFLAGS) -o $@ $(LFLL_UML_TEST_GET_NCURSES_USER_INTERFACE_MESSAGE_OBJS) $(LFLL_UML_STANDARD_LIBRARIES)
+
+
+
+
+
+# Target related to the LFLL_UML_TEST_GET_WEB_USER_INTERFACE_MESSAGE_CGI macro.
+
+lfllUmlTestGetWebUserInterfaceMessage.cgi: $(LFLL_UML_TEST_GET_WEB_USER_INTERFACE_MESSAGE_OBJS)
+	$(LD) $(LFLAGS) -o $@ $(LFLL_UML_TEST_GET_WEB_USER_INTERFACE_MESSAGE_OBJS) -L.$(LFLL_UML_FREEBSD_LIBRARY_DIRECTORY) $(LFLL_UML_STANDARD_LIBRARIES) $(LFLL_UML_ML_CGI)
+
+
+
+
+
+# Target related to the LFLL_UML_TEST_GET_ABSOLUTE_FILE_NAME macro.
+
+lfllUmlTestGetAbsoluteFileName: $(LFLL_UML_TEST_GET_ABSOLUTE_FILE_NAME_OBJS)
+	$(LD) $(LFLAGS) -o $@ $(LFLL_UML_TEST_GET_ABSOLUTE_FILE_NAME_OBJS) $(LFLL_UML_STANDARD_LIBRARIES)
+
+
+
+
+
+# Target related to the LFLL_UML_TEST_CHECK_STRING_FIELD macro.
+
+lfllUmlTestCheckStringField: $(LFLL_UML_TEST_CHECK_STRING_FIELD_OBJS)
+	$(LD) $(LFLAGS) -o $@ $(LFLL_UML_TEST_CHECK_STRING_FIELD_OBJS) $(LFLL_UML_STANDARD_LIBRARIES)
+
+
+
+
+
+# Target related to the LFLL_UML_TEST_CHECK_NICKNAME macro.
+
+lfllUmlTestCheckNickname: $(LFLL_UML_TEST_CHECK_NICKNAME_OBJS)
+	$(LD) $(LFLAGS) -o $@ $(LFLL_UML_TEST_CHECK_NICKNAME_OBJS) $(LFLL_UML_STANDARD_LIBRARIES)
+
+
+
+
+
+# Target related to the LFLL_UML_TEST_CHECK_EMAIL macro.
+
+lfllUmlTestCheckEmail: $(LFLL_UML_TEST_CHECK_EMAIL_OBJS)
+	$(LD) $(LFLAGS) -o $@ $(LFLL_UML_TEST_CHECK_EMAIL_OBJS) $(LFLL_UML_STANDARD_LIBRARIES)
+
+
+
+
+
+# Target related to the LFLL_UML_TEST_CREATE_RANDOM_STRING macro.
+
+lfllUmlTestCreateRandomString: $(LFLL_UML_TEST_CREATE_RANDOM_STRING_OBJS)
+	$(LD) $(LFLAGS) -o $@ $(LFLL_UML_TEST_CREATE_RANDOM_STRING_OBJS) $(LFLL_UML_STANDARD_LIBRARIES)
+
+
+
+
+
+# Target related to the LFLL_UML_TEST_CREATE_NICKNAME macro.
+
+lfllUmlTestCreateNickname: $(LFLL_UML_TEST_CREATE_NICKNAME_OBJS)
+	$(LD) $(LFLAGS) -o $@ $(LFLL_UML_TEST_CREATE_NICKNAME_OBJS) $(LFLL_UML_STANDARD_LIBRARIES)
+
+
+
+
+
+# Target related to the LFLL_UML_TEST_GET_CRYPT_ALGORITHM macro.
+
+lfllUmlTestGetCryptAlgorithm: $(LFLL_UML_TEST_GET_CRYPT_ALGORITHM_OBJS)
+	$(LD) $(LFLAGS) -o $@ $(LFLL_UML_TEST_GET_CRYPT_ALGORITHM_OBJS) $(LFLL_UML_STANDARD_LIBRARIES)
+
+
+
+
+
+# Target related to the LFLL_UML_TEST_ENCODE_PASSWORD_WITH_SPECIFIC_ALGORITHM macro.
+
+lfllUmlTestEncodePasswordWithSpecificAlgorithm: $(LFLL_UML_TEST_ENCODE_PASSWORD_WITH_SPECIFIC_ALGORITHM_OBJS)
+	$(LD) $(LFLAGS) -o $@ $(LFLL_UML_TEST_ENCODE_PASSWORD_WITH_SPECIFIC_ALGORITHM_OBJS) $(LFLL_UML_STANDARD_LIBRARIES)
+
+
+
+
+
+# Target related to the LFLL_UML_TEST_ENCODE_PASSWORD_WITH_SPECIFIC_SALT macro.
+
+lfllUmlTestEncodePasswordWithSpecificSalt: $(LFLL_UML_TEST_ENCODE_PASSWORD_WITH_SPECIFIC_SALT_OBJS)
+	$(LD) $(LFLAGS) -o $@ $(LFLL_UML_TEST_ENCODE_PASSWORD_WITH_SPECIFIC_SALT_OBJS) $(LFLL_UML_STANDARD_LIBRARIES)
+
+
+
+
+
+# Target related to the LFLL_UML_TEST_CHECK_PASSWORD macro.
+
+lfllUmlTestCheckPassword: $(LFLL_UML_TEST_CHECK_PASSWORD_OBJS)
+	$(LD) $(LFLAGS) -o $@ $(LFLL_UML_TEST_CHECK_PASSWORD_OBJS) $(LFLL_UML_STANDARD_LIBRARIES)
+
+
+
+
+
+# Target related to the exclusion of all object codes and executable files.
+
+clean:
+	rm -f *.o $(ALL)
+
+
+
+
+
+# Target related to the installation of the library.
+
+install:
+	make all
+	mkdir $(LFLL_UML_BINARIES_DIRECTORY)
+	mkdir $(LFLL_UML_DATA_DIRECTORY)
+	mkdir $(LFLL_UML_COOKIES_DIRECTORY)
+	mkdir -p $(LFLL_UML_CGIS_DIRECTORY)
+	cp $(LFLL_UML_PRIVATE_HTML_DIRECTORY)index_en-us.html $(LFLL_UML_PUBLIC_LFLL_UML_DIRECTORY)
+	cp $(LFLL_UML_PRIVATE_HTML_DIRECTORY)index_pt-br.html $(LFLL_UML_PUBLIC_LFLL_UML_DIRECTORY)
+	ln -s $(LFLL_UML_PUBLIC_LFLL_UML_DIRECTORY)index_en-us.html $(LFLL_UML_PUBLIC_LFLL_UML_DIRECTORY)index.html
+	cp $(LFLL_UML_BINARY_FILES) $(LFLL_UML_BINARIES_DIRECTORY)
+	cp $(LFLL_UML_CGI_FILES) $(LFLL_UML_CGIS_DIRECTORY)
+	make clean
+
+
+
+
+
+# Target related to the deinstallation of the library.
+
+deinstall:
+	make clean
+	rm -rf $(LFLL_UML_PUBLIC_HTML_DIRECTORY)
+	rm -rf $(LFLL_UML_BINARIES_DIRECTORY)
+	rm -rf $(LFLL_UML_DATA_DIRECTORY)
+
+
+
+
+
+
+
+
+
+
+# $RCSfile: BSDmakefile,v $

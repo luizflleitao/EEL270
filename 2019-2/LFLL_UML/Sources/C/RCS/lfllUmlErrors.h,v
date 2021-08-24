@@ -1,0 +1,470 @@
+head	1.11;
+access;
+symbols;
+locks
+	luiz.leitao:1.11; strict;
+comment	@ * @;
+
+
+1.11
+date	2019.12.07.20.24.51;	author luiz.leitao;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2019.12.07.01.58.25;	author luiz.leitao;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2019.12.07.00.23.30;	author luiz.leitao;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2019.12.06.16.15.13;	author luiz.leitao;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2019.11.30.16.22.48;	author luiz.leitao;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2019.11.30.08.15.17;	author luiz.leitao;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2019.11.29.14.00.24;	author luiz.leitao;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2019.11.28.13.29.13;	author luiz.leitao;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2019.11.28.10.30.03;	author luiz.leitao;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2019.11.27.13.00.22;	author luiz.leitao;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2019.11.26.06.15.28;	author luiz.leitao;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.11
+log
+@Inclusion of new error values in lfllUmlErrorType.
+@
+text
+@/*
+ * Universidade Federal do Rio de Janeiro
+ * Escola Politecnica
+ * Departamento de Eletronica e de Computacao
+ * Prof. Marcelo Luiz Drumond Lanza
+ * EEL270 - Computacao II - Turma 2019/2
+ *
+ * $Author: luiz.leitao $
+ * $Date: 2019/12/07 01:58:25 $
+ * $Log: lfllUmlErrors.h,v $
+ * Revision 1.10  2019/12/07 01:58:25  luiz.leitao
+ * Inclusion of new error values in lfllUmlErrorType.
+ *
+ * Revision 1.9  2019/12/07 00:23:30  luiz.leitao
+ * Inclusion of new error values in lfllUmlErrorType.
+ *
+ * Revision 1.8  2019/12/06 16:15:13  luiz.leitao
+ * Inclusion of new error values in lfllUmlErrorType.
+ *
+ * Revision 1.7  2019/11/30 16:22:48  luiz.leitao
+ * Inclusion of new error values in lfllUmlErrorType.
+ *
+ * Revision 1.6  2019/11/30 08:15:17  luiz.leitao
+ * Inclusion of new error values in lfllUmlErrorType.
+ *
+ * Revision 1.5  2019/11/29 14:00:24  luiz.leitao
+ * Inclusion of new error values in lfllUmlErrorType.
+ *
+ * Revision 1.4  2019/11/28 13:29:13  luiz.leitao
+ * Inclusion of new error values in lfllUmlErrorType.
+ *
+ * Revision 1.3  2019/11/28 10:30:03  luiz.leitao
+ * Inclusion of new error values in lfllUmlErrorType.
+ *
+ * Revision 1.2  2019/11/27 13:00:22  luiz.leitao
+ * Inclusion of new error values in lfllUmlErrorType.
+ *
+ * Revision 1.1  2019/11/26 06:15:28  luiz.leitao
+ * Initial revision
+ *
+ */
+
+
+
+
+
+
+
+
+
+
+#ifndef LFLL_UML_ERRORS_H  /* Begin of preprocessor directive. */
+#define LFLL_UML_ERRORS_H  "@@(#)lfllUmlErrors.h $Revision: 1.10 $" 
+
+
+
+
+
+/* Inclusion of personalized header files for the project. */
+
+#include "lfllUmlTypes.h"
+
+
+
+
+
+/* Definition of numbered type lfllUmlErrorType. */
+
+typedef enum
+{
+  lfllUmlOk, /* 0 */
+  lfllUmlAbsolutePathNull, /* 1 */
+  lfllUmlAbsolutePathEmpty, /* 2 */
+  lfllUmlFileNameNull, /* 3 */
+  lfllUmlFileNameEmpty, /* 4 */
+  lfllUmlAbsolutePathInvalidLength, /* 5 */
+  lfllUmlFileNameInvalidLength, /* 6 */
+  lfllUmlAbsolutePathInvalidFormat, /* 7 */
+  lfllUmlStringNull, /* 8 */
+  lfllUmlStringEmpty, /* 9 */
+  lfllUmlStringValidCharactersSetNull, /* 10 */
+  lfllUmlStringValidCharactersSetEmpty, /* 11 */
+  lfllUmlStringInvalidLength, /* 12 */
+  lfllUmlStringInvalidCharacter, /* 13 */
+  lfllUmlNicknameNull, /* 14 */
+  lfllUmlNicknameEmpty, /* 15 */
+  lfllUmlNicknameValidCharactersSetNull, /* 16 */
+  lfllUmlNicknameValidCharactersSetEmpty, /* 17 */
+  lfllUmlNicknameInvalidLength, /* 18 */
+  lfllUmlNicknameInvalidCharacter, /* 19 */
+  lfllUmlNicknameInvalidFormat, /* 20 */
+  lfllUmlEmailNull, /* 21 */
+  lfllUmlEmailEmpty, /* 22 */
+  lfllUmlEmailValidCharactersSetNull, /* 23 */
+  lfllUmlEmailValidCharactersSetEmpty, /* 24 */
+  lfllUmlEmailInvalidLength, /* 25 */
+  lfllUmlEmailInvalidCharacter, /* 26 */
+  lfllUmlEmailInvalidFormat, /* 27 */
+  lfllUmlRandomStringValidCharactersSetNull, /* 28 */
+  lfllUmlRandomStringValidCharactersSetEmpty, /* 29 */
+  lfllUmlRandomStringInvalidLength, /* 30 */
+  lfllUmlUsernameNull, /* 31 */
+  lfllUmlUsernameEmpty, /* 32 */
+  lfllUmlUsernameInvalidLength, /* 33 */
+  lfllUmlUsernameInvalidCharacter, /* 34 */
+  lfllUmlUsernameLastnameEmpty, /* 35 */
+  lfllUmlNicknamePossibilityInvalidLength, /* 36 */
+  lfllUmlEncodedPasswordHashNull, /* 37 */
+  lfllUmlEncodedPasswordHashEmpty, /* 38 */
+  lfllUmlEncodedPasswordHashInvalidLength, /* 39 */
+  lfllUmlEncodedPasswordHashInvalidCharacter, /* 40 */
+  lfllUmlEncodedPasswordHashInvalidFormat, /* 41 */
+  lfllUmlEncodedPasswordHashsAlgorithmIdInvalidValue, /* 42 */
+  lfllUmlPlaintextPasswordNull, /* 43 */
+  lfllUmlPlaintextPasswordEmpty, /* 44 */
+  lfllUmlCryptAlgorithmIdInvalidValue, /* 45 */
+  lfllUmlPlaintextPasswordInvalidLength, /* 46 */
+  lfllUmlPlaintextPasswordInvalidCharacter, /* 47 */
+  lfllUmlEncodedPasswordHashCompleteSaltNull, /* 48 */
+  lfllUmlEncodedPasswordHashCompleteSaltEmpty, /* 49 */
+  lfllUmlEncodedPasswordHashCompleteSaltInvalidLength, /* 50 */
+  lfllUmlEncodedPasswordHashCompleteSaltInvalidCharacter, /* 51 */
+  lfllUmlEncodedPasswordHashCompleteSaltInvalidFormat, /* 52 */
+  lfllUmlDesEncodedPasswordsMismatch, /* 53 */
+  lfllUmlMd5EncodedPasswordsMismatch, /* 54 */
+  lfllUmlSha256EncodedPasswordsMismatch, /* 55 */
+  lfllUmlSha512EncodedPasswordsMismatch, /* 56 */
+  lfllUmlErrorCodesNumber /* 57 */
+} lfllUmlErrorType;
+
+
+
+
+
+/* 
+ * char *
+ * LfllUmlGetCliErrorMessage(lfllUmlErrorType, lfllUmlLanguageType);
+ *
+ * Arguments:
+ * lfllUmlErrorType - enter a valid error code of lfllUmlErrorType (I)
+ * lfllUmlLanguageType - enter a valid language of lfllUmlLanguageType (I)
+ *
+ * Returned code:
+ * String in chosen language with a error message.
+ *
+ * Description:
+ * This function returns a corresponding error message at selected language on CLI interface.
+ */
+
+char *
+LfllUmlGetCliErrorMessage(lfllUmlErrorType, lfllUmlLanguageType);
+
+
+
+
+
+/* 
+ * char *
+ * LfllUmlGetNcursesErrorMessage(lfllUmlErrorType, lfllUmlLanguageType);
+ *
+ * Arguments:
+ * lfllUmlErrorType - enter a valid error code of lfllUmlErrorType (I)
+ * lfllUmlLanguageType - enter a valid language of lfllUmlLanguageType (I)
+ *
+ * Returned code:
+ * String in chosen language with a error message.
+ *
+ * Description:
+ * This function returns a corresponding error message at selected language on Ncurses interface.
+ */
+
+char *
+LfllUmlGetNcursesErrorMessage(lfllUmlErrorType, lfllUmlLanguageType);
+
+
+
+
+
+/* 
+ * char *
+ * LfllUmlGetWebErrorMessage(lfllUmlErrorType, lfllUmlLanguageType);
+ *
+ * Arguments:
+ * lfllUmlErrorType - enter a valid error code of lfllUmlErrorType (I)
+ * lfllUmlLanguageType - enter a valid language of lfllUmlLanguageType (I)
+ *
+ * Returned code:
+ * String in chosen language with a error message.
+ *
+ * Description:
+ * This function returns a corresponding error message at selected language on Web interface.
+ */
+
+char *
+LfllUmlGetWebErrorMessage(lfllUmlErrorType, lfllUmlLanguageType);
+
+
+
+
+
+#endif  /* End of preprocessor directive. */
+
+
+
+
+
+
+
+
+
+
+/* $RCSfile: lfllUmlErrors.h,v $ */
+@
+
+
+1.10
+log
+@Inclusion of new error values in lfllUmlErrorType.
+@
+text
+@d9 1
+a9 1
+ * $Date: 2019/12/07 00:23:30 $
+d11 3
+d53 1
+a53 1
+#define LFLL_UML_ERRORS_H  "@@(#)lfllUmlErrors.h $Revision: 1.9 $" 
+d124 5
+a128 1
+  lfllUmlErrorCodesNumber /* 53 */
+@
+
+
+1.9
+log
+@Inclusion of new error values in lfllUmlErrorType.
+@
+text
+@d9 1
+a9 1
+ * $Date: 2019/12/06 16:15:13 $
+d11 3
+d50 1
+a50 1
+#define LFLL_UML_ERRORS_H  "@@(#)lfllUmlErrors.h $Revision: 1.8 $" 
+d116 6
+a121 1
+  lfllUmlErrorCodesNumber /* 48 */
+@
+
+
+1.8
+log
+@Inclusion of new error values in lfllUmlErrorType.
+@
+text
+@d9 1
+a9 1
+ * $Date: 2019/11/30 16:22:48 $
+d11 3
+d47 1
+a47 1
+#define LFLL_UML_ERRORS_H  "@@(#)lfllUmlErrors.h $Revision: 1.7 $" 
+d108 6
+a113 1
+  lfllUmlErrorCodesNumber /* 43 */
+@
+
+
+1.7
+log
+@Inclusion of new error values in lfllUmlErrorType.
+@
+text
+@d9 1
+a9 1
+ * $Date: 2019/11/30 08:15:17 $
+d11 3
+d44 1
+a44 1
+#define LFLL_UML_ERRORS_H  "@@(#)lfllUmlErrors.h $Revision: 1.6 $" 
+d99 7
+a105 1
+  lfllUmlErrorCodesNumber /* 37 */
+@
+
+
+1.6
+log
+@Inclusion of new error values in lfllUmlErrorType.
+@
+text
+@d9 1
+a9 1
+ * $Date: 2019/11/29 14:00:24 $
+d11 3
+d41 1
+a41 1
+#define LFLL_UML_ERRORS_H  "@@(#)lfllUmlErrors.h $Revision: 1.5 $" 
+d90 7
+a96 1
+  lfllUmlErrorCodesNumber /* 31 */
+@
+
+
+1.5
+log
+@Inclusion of new error values in lfllUmlErrorType.
+@
+text
+@d9 1
+a9 1
+ * $Date: 2019/11/28 13:29:13 $
+d11 3
+d38 1
+a38 1
+#define LFLL_UML_ERRORS_H  "@@(#)lfllUmlErrors.h $Revision: 1.4 $" 
+d84 4
+a87 1
+  lfllUmlErrorCodesNumber /* 28 */
+@
+
+
+1.4
+log
+@Inclusion of new error values in lfllUmlErrorType.
+@
+text
+@d9 1
+a9 1
+ * $Date: 2019/11/28 10:30:03 $
+d11 3
+d35 1
+a35 1
+#define LFLL_UML_ERRORS_H  "@@(#)lfllUmlErrors.h $Revision: 1.3 $" 
+d74 8
+a81 1
+  lfllUmlErrorCodesNumber /* 21 */
+@
+
+
+1.3
+log
+@Inclusion of new error values in lfllUmlErrorType.
+@
+text
+@d9 1
+a9 1
+ * $Date: 2019/11/27 13:00:22 $
+d11 3
+d32 1
+a32 1
+#define LFLL_UML_ERRORS_H  "@@(#)lfllUmlErrors.h $Revision: 1.2 $" 
+d64 8
+a71 1
+  lfllUmlErrorCodesNumber /* 14 */
+@
+
+
+1.2
+log
+@Inclusion of new error values in lfllUmlErrorType.
+@
+text
+@d9 1
+a9 1
+ * $Date: 2019/11/26 06:15:28 $
+d11 3
+d29 1
+a29 1
+#define LFLL_UML_ERRORS_H  "@@(#)lfllUmlErrors.h $Revision: 1.1 $" 
+d55 7
+a61 1
+  lfllUmlErrorCodesNumber /* 8 */
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d8 6
+a13 3
+ * $Author$
+ * $Date$
+ * $Log$
+d26 1
+a26 1
+#define LFLL_UML_ERRORS_H  "@@(#)lfllUmlErrors.h $Revision$" 
+d45 8
+a52 1
+  lfllUmlErrorCodesNumber /* 1 */
+d136 1
+a136 1
+/* $RCSfile$ */
+@

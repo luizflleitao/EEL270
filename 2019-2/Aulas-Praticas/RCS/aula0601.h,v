@@ -1,0 +1,244 @@
+head	1.4;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.4
+date	2019.10.02.23.58.07;	author luiz.leitao;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2019.09.29.23.09.48;	author luiz.leitao;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2019.09.20.02.48.20;	author luiz.leitao;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2019.09.17.17.09.07;	author luiz.leitao;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@Inclusao do prototipo da funcao GerarPisPasep.
+@
+text
+@/*
+ * Universidade Federal do Rio de Janeiro
+ * Escola Politecnica
+ * Departamento de Eletronica e de Computacao
+ * EEL270 - Computacao II - Turma 2019/2
+ * Prof. Marcelo Luiz Drumond Lanza
+ *
+ * Autor: Luiz Fernando Loureiro Leitao
+ * Descricao: implementacao do arquivo de cabecalho referente a aula 06.
+ *
+ * $Author: luiz.leitao $
+ * $Date: 2019/09/29 23:09:48 $
+ * $Log: aula0601.h,v $
+ * Revision 1.3  2019/09/29 23:09:48  luiz.leitao
+ * Alteracoes adicionais no arquivo.
+ *
+ * Revision 1.2  2019/09/20 02:48:20  luiz.leitao
+ * Inclusao do prototipo da funcao ValidarPisPasep.
+ *
+ * Revision 1.1  2019/09/17 17:09:07  luiz.leitao
+ * Initial revision
+ *
+ */
+
+
+
+
+
+
+
+
+
+
+#ifndef _AULA0601_  /* Inicio da diretiva do pre-processador. */
+#define _AULA0601_  "@@(#)aula0601.h $Revision: 1.3 $"
+
+
+
+
+
+/* Definicao das macros. */
+
+#define PESOS_PIS_PASEP						10
+#define PIS_PASEP_SEM_DIGITO_VERIFICADOR			10
+#define PIS_PASEP_COM_DIGITO_VERIFICADOR_SEM_HIFEN		11
+#define PIS_PASEP_COM_DIGITO_VERIFICADOR_COM_HIFEN		12
+#define EOS							'\0'
+
+
+
+
+
+/* Codigos de retorno. */
+
+#define OK							0
+#define NUMERO_DE_ARGUMENTOS_INVALIDO				1
+#define ARGUMENTO_INVALIDO					2
+#define DIGITO_INVALIDO						3
+#define COMPRIMENTO_INVALIDO					4
+#define AUSENCIA_DO_HIFEN					5
+#define ARGUMENTO_NULO						6
+
+
+
+
+
+/* Definicao do tipo byte a partir dos tipos basicos da linguagem. */
+
+typedef unsigned char byte;
+
+
+
+
+
+/* Definicao do tipo ush a partir dos tipos basicos da linguagem. */
+
+typedef unsigned short ush;
+
+
+
+
+
+/* Definicao do tipo ull a partir dos tipos basicos da linguagem. */
+
+typedef unsigned long long ull;
+
+
+
+
+
+/* Definicao do tipo enumerado tipoErros. */
+
+typedef enum
+{
+  invalido,
+  valido,
+  ok = 0,
+  digitoInvalido = 3,
+  argumentoNulo = 6
+} tipoErros;
+
+
+
+
+
+/* Prototipo da funcao GerarDigitoVerificadorPisPasep. */
+
+tipoErros
+GerarDigitoVerificadorPisPasep(byte []);
+
+
+
+
+
+/* Prototipo da funcao ValidarPisPasep. */
+
+tipoErros
+ValidarPisPasep(byte []);
+
+
+
+
+
+/* Prototipo da funcao GerarPisPasep. */
+
+tipoErros
+GerarPisPasep(byte *);
+
+
+
+
+
+#endif  /* Final da diretiva do pre-processador. */
+
+
+
+
+
+
+
+
+
+
+/* $RCSfile: aula0601.h,v $ */
+@
+
+
+1.3
+log
+@Alteracoes adicionais no arquivo.
+@
+text
+@d12 1
+a12 1
+ * $Date: 2019/09/20 02:48:20 $
+d14 3
+d35 1
+a35 1
+#define _AULA0601_  "@@(#)aula0601.h $Revision: 1.2 $"
+a61 1
+#define ARGUMENTO_VAZIO						7
+d99 1
+a99 2
+  argumentoNulo = 6,
+  argumentoVazio
+d119 9
+@
+
+
+1.2
+log
+@Inclusao do prototipo da funcao ValidarPisPasep.
+@
+text
+@d12 1
+a12 1
+ * $Date: 2019/09/17 17:09:07 $
+d14 3
+d32 1
+a32 1
+#define _AULA0601_  "@@(#)aula0601.h $Revision: 1.1 $"
+d44 1
+d58 2
+d96 3
+a98 1
+  digitoInvalido = 3
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d11 6
+a16 3
+ * $Author$
+ * $Date$
+ * $Log$
+d29 1
+a29 1
+#define _AULA0601_  "@@(#)aula0601.h $Revision$"
+d106 9
+d126 1
+a126 1
+/* $RCSfile$ */
+@
